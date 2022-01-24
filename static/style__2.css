@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+body{
+    background-color: white;
+    color: black;
+    font-size: 1.2rem ;
+    min-height: 100%;
+}
+
+.main__grid__container{
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 1px solid black;
+}
+
+.main__grid__item{
+    border: 1px solid black;
+    gap: 10px ;
+}

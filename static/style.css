@@ -18,8 +18,8 @@ p{font-size: 1.25em;}
 /*********MAIN WRAPPER****************/
 
 .main__grid__wrapper{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+    display: flex;
+    
     
     
 }
@@ -128,7 +128,8 @@ ul.show{
         top:-100vh;
         text-align: center;
         transition: all .4s;
-        flex-direction: column;
+        
+        flex-direction:column;
 
     }
     .menu-items.show{
@@ -138,7 +139,7 @@ ul.show{
     }
     .menu-items li{
         top: 0%;
-         width: 50%;
+        width: 50%;
         line-height: 10px;
         }
         
@@ -157,10 +158,12 @@ ul.show{
         color: rgb(29, 255, 255);
     }
     
-
+    
 
     
 }
+
+
 
 /******* INDEX HERO  *******/
 #hero{
@@ -414,33 +417,38 @@ ul.show{
 /*********PRODUCTS PAGE*************/
 .products__main__grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(450px,1fr));
     background-color: white;
-    height: auto;
     place-items: center center;
+    grid-gap: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .card{
-    display: grid;
-    padding: 20px;
-    grid-gap: 40px;
-    background-color: #1c1b29;
-    
+    display: flex;
+    flex-direction: column;
+    background-color: #fcfcfc;
+    border: 1px solid black;   
 
 }
 
 
 .container{
-    position: relative;
+    display: flex;
+    flex-direction: column;
     clip-path: polygon(0 0,100% 0, 100% 100%, 0 100%);
 }
 img{
-    width: 100%;
-    display: block;
-   
+    max-width: initial;
+    border-radius: 30px;
+    width: 50%;
+    display: flex;
+    overflow: hidden;
 }
- 
+
 .container:after{
     content: "";
+    
     height: 100%;
     width: 100%;
     position: absolute;
@@ -478,13 +486,13 @@ img{
 }
 
 .item__details{
-    padding: 20px 10px;
+    
 }
 .item__details>h3{
-    color: #ffffff;
+    color: rgb(36, 36, 36);
     font-weight: 600;
     font-size: 18px;
-    margin: 10px 0 15px 0;
+    margin: 0 0 1px 0;
 }
 .item__details>p{
     color: #a0a0a0;
