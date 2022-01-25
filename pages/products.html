@@ -26,108 +26,97 @@
 </head>
 
 <body>
-
     <header>
         <!-- <img src="../images/logo.png" alt="logo" class="logo">-->
 
         <nav id="menu">
-            <label class="mutedLogo">Muted Instruments <a href="/index.html"></a></label>
+            <div class="mutedLogo">
+                <span>Muted</span> <a href="../index.html"></a>
+                <span>Instruments</span> <a href="../index.html"></a>
+            </div>
             <ul class="menu-items">
-                <li><a href="../index.html">HOME</a></li>
-                <li><a href="./products.html">PRODUCTS</a></li>
-                <li><a href="./projects.html">PROJECTS</a></li>
-                <li><a href="./support.html">SUPPORT</a></li>
-                <li><a href="./aboutus.html">ABOUT US</a></li>
-                <li><a href="./courses.html">COURSES</a></li>
+                <li><a href="../index.html">HOME</a><img src="" alt=""></li>
+                <li><a href="products.html">PRODUCTS</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a href="support.html">SUPPORT</a></li>
+                <li><a href="aboutus.html">ABOUT</a></li>
+                <li><a href="courses.html">COURSES</a></li>
             </ul>
             <span class="btn_menu">
                 <i class="fa fa-bars"></i>
             </span>
         </nav>
-
     </header>
+
     <main>
-        <div class="products__main__grid">
-            <div class="container">
-                <div class="card card1">
-
-
-                    <img src="../images/products/cartridge.png" alt="knobs">
-
-                </div>
-                <div class="item__details">
-                    <h3>First Item</h3>
-                    <p>Price U$S 100</p>
-                </div>
-            </div>
-            <div class="container">
-                <div class="card card1">
-
-
-                    <img src="../images/products/cartridge.png" alt="knobs">
-
-                </div>
-                <div class="item__details">
-                    <h3>First Item</h3>
-                    <p>Price U$S 100</p>
-                </div>
-            </div>
-            <div class="container">
-                <div class="card card1">
-
-
-                    <img src="../images/products/cartridge.png" alt="knobs">
-
-                </div>
-                <div class="item__details">
-                    <h3>First Item</h3>
-                    <p>Price U$S 100</p>
-                </div>
-            </div>
-            <div class="container">
-                <div class="card card1">
-
-
-                    <img src="../images/products/cartridge.png" alt="knobs">
-
-                </div>
-                <div class="item__details">
-                    <h3>First Item</h3>
-                    <p>Price U$S 100</p>
-                </div>
-            </div>
-
+    
+    <!-- PRODUCT GRID -->
+    <nav id="products__subMenu"> 
+        <ul class="subMenu-items">
+        <li><a href="#">all products</a></li>
+        <li><a href="#">cables</a></li>
+        <li><a href="#">controllers</a></li>
+        <li><a href="#">kits</a></li>
+        <li><a href="#">software</a></li>
+        <li><a href="#">synths</a></li>
+        
+    </ul>
+</nav>
+    <div class="main__grid__container">
+        
+        <div class="grid__colum">
+            <!-- <div class="grid__img">
+                <img src="./images/products/op-z.png" alt="pcbController">
+                <h3>Product 1</h3>
+                <p>Price U$S</p>
+                <button>BUY</button>
+            </div> -->
         </div>
-
-
-
-    </main>
-    <div class="footer-content">
-        <footer>
-            <ul class="footer_menu-items_left">
-                <h3>Our Projects</h3>
-
-                <li><a href="#">Project 1</a></li>
-                <li><a href="#">Project 2</a></li>
-                <li><a href="#">Project 3</a></li>
-                <li><a href="#">Project 4</a></li>
-                <li><a href="#">Project 5</a></li>
-                <li><a href="#">Project 6</a></li>
-            </ul>
-
-            <ul class="socials">
-                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitch"></i></a></li>
-                <li><a href="#"><i class="fa fa-github"></i></a></li>
-
-            </ul>
-            <p>© 2021 Muted Instruments | Address: Florida, Buenos Aires, Argentina</p>
-        </footer>
+        <div class="grid__colum">
+            <!-- <div class="grid__img">
+                <img src="./images/products/bag.png" alt="pcbController">
+                <h3>Product 1</h3>
+                <p>Price U$S</p>
+                <button>BUY</button>
+            </div> -->
+        </div>
+        <div class="grid__colum">
+            <div class="grid__img">
+                <img src="./images/products/cartridge.png" alt="pcbController">
+                <h3>Product 1</h3>
+                <p>Price U$S</p>
+                <button>BUY</button>
+            </div>
+        </div>
+        <div class="grid__colum">
+            <div class="grid__img">
+                <img src="./images/products/cartridge.png" alt="pcbController">
+                <h3>Product 1</h3>
+                <p>Price U$S</p>
+                <button>BUY</button>
+            </div>
+        </div>
     </div>
+    <div class="footer-content">
+        <div class="main__grid__item">
+            <footer>
 
+                <div class="main__grid__item">
+                    <ul class="socials">
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitch"></i></a></li>
+                        <li><a href="#"><i class="fa fa-github"></i></a></li>
+
+                    </ul>
+                    <p>© 2021 Muted Instruments | Address: Florida, Buenos Aires, Argentina</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+</main>
+    <!-- END GRID CONTAINER -->
     <script src="../static/js/headerjs.js"></script>
-
 </body>
 
 </html>
