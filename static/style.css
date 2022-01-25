@@ -195,15 +195,7 @@ ul.show{
         
     }
     
-        .grid__colum{
-        /* FLEXBOX APLICADO DENTRO DE GRID */
-        background-color: red;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         
-    }
 
     .card{
         height: 40px;
@@ -275,7 +267,11 @@ ul.show{
         color:white ;
         font-weight:lighter;
     }
-    
+
+    @media (max-width:433px){
+        .subMenu-items{
+            display: none;
+    }
     
 
     
@@ -710,12 +706,9 @@ footer{
 /****** FOOTER SOCIAL ICONS  ******/
 .socials{
     display: flex ;
-   
     list-style: none;
     justify-items: center;
     justify-content: center;
-  
-    
 }
 
 .socials li{
@@ -740,7 +733,7 @@ footer{
 
 .main__grid__container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr ;
     
     padding-left: 60px;
     padding-right: 60px;
@@ -778,7 +771,7 @@ footer{
     margin: 0 0 1px 0;
 }
 
-.item__details>p{
+.item__details> p {
     color: #a0a0a0;
     font-size: 15px;
     line-height: 30px;
