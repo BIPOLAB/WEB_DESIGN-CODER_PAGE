@@ -261,14 +261,14 @@ ul.show{
     flex-direction: column;
     margin-top: 5px;
     height: 680px ;
-    width: 100%;
-    color:  white;
+    width: auto;
+    color:  black;
     background-image: linear-gradient(
         0deg,
         rgba(100, 231, 74, 0.08),
         rgba(100, 231, 74, 0.08)
     )
-    ,url("../images/team-BW.jpg");
+    ,url("../images/adobeabout.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -301,8 +301,8 @@ ul.show{
     .productsWrapper h3{color: rgb(32, 32, 28);}
 
     .cardProducts{
-        width: 300px;
-        height: 430px;
+        width: 385px;
+        height: 530px;
         border-radius: 8px;
         box-shadow: 0 2px 2px rgba(0,0,0,0.1);
         background-color:rgba(251, 252, 249, 0.959);;
@@ -320,8 +320,8 @@ ul.show{
     }
 
     .cardProducts img{
-        width: 300px;
-        height: 213px;
+        width: 500px;
+        height: 313px;
         object-fit: cover;
     }
 
@@ -336,7 +336,7 @@ ul.show{
     
 
 .productsWrapper button{
-    margin-top: 10px;
+    margin-top: 30px;
     font-size: 1em;
     font-weight: bold;
     padding: 5px 20px;
@@ -377,7 +377,7 @@ ul.show{
 
 /******PROJECTS CARDS*****/
     .cardProjects{
-        width: 300px;
+        width: 385px;
         height: 200px;
         border-radius: 8px;
         box-shadow: 0 2px 2px rgba(0,0,0,0.1);
@@ -413,7 +413,7 @@ ul.show{
     
 
 .projectsWrapper button{
-    margin-top: 10px;
+    margin-top: 30px;
     font-size: 1em;
     font-weight: bold;
     padding: 5px 20px;
@@ -491,18 +491,21 @@ img{
     .coursesWrapper h3{color: rgb(134, 194, 50);}
 
 /***** ABOUT US PAGE *****/
-.aboutContent{
+.about__content{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    text-align: center;
+    text-align: left;
     color: white;
 }
-.about p {
+.about__content p {
+    font-size: 20px;
     background-color: black;
     height: auto;
-    padding-top: 40px;
+    font-weight: 100;
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
 
@@ -533,19 +536,60 @@ img{
 }
 
 
-
+.data-content{
+    display: flex;
+    flex-direction: row;
+}
 
 /*******  FORM  *********/
-.formContent{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align:left;
+.contact__form{
+    width: 600px;
+    background-color: #fcb900;
+    padding:30px;
+    margin:auto;
+    border-radius:4px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     color: white;
+    line-height: 40px;
+    box-shadow: 3px 3px 10px rgba(100, 75, 158,0.5);
+
+}
+.contact__form h4{
+    font-family: 'Rock 3D', cursive;
+    text-transform: uppercase;
+    color: rgb(100, 75, 158);
+    font-size: 22px;
+    margin-bottom: 20px;
+    
+
+}
+.form__btn{
+    width: 50%;
+    float: right;
+    background-color: #fcb900;
+    border: 2px solid white;
+    padding:12px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    font-size: 18px;
+    color: black;
+    margin:16px 0;
+    border-radius: 4px;
+}
+.inputs{
+    width: 100%;
+    background-color: #24303c;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
     border: 1px solid white;
+    font-family: 'calibri';
+    font-size:18px ;
+}
+
+.maps{
+    margin-left: 20px;
+
 }
 
 /****** FOOTER ******/
@@ -650,9 +694,7 @@ footer{
 /* MEDIA RESPONSIVE FOR MOBILE */
 
 @media  (max-width: 768px) {
-    body{
-        background-color: white;
-    }
+    
     .main__grid__container{
         display: block;
     }
@@ -673,10 +715,7 @@ footer{
         width: 100%;
     }
     .btn_menu{
-        display:block;
-        
-
-        
+        display:block;      
     }
     
     .menu-items{
@@ -732,6 +771,15 @@ footer{
         transition: 0.5s;
         color:white ;
         font-weight:lighter;
+    }
+
+    .data-content{
+        flex-direction: column;
+    }
+
+    .maps{
+        margin-top: 10px;
+        
     }
 
     @media (max-width:433px){

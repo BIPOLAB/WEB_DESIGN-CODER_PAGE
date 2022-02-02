@@ -50,55 +50,65 @@
         <section id="aboutHero">
             <h1>ABOUT US</h1>
         </section>
-        
+
         <section>
-            <div class="aboutContent">
-                <p>Somos un grupo de personas dedicadas a la investigación con el objetivo de transformar la experiencia de los artistas
+            <div class="about__content">
+                <p>Somos un grupo de personas dedicadas a la investigación con el objetivo de transformar la experiencia
+                    de los artistas
                     desarrollando tecnologias con un concepto atractivo y diferente .
-                    En nuestro equipo realizamos educación, divulgación y comunicación de la ciencia aplicada al arte.</p>
-            
-        
-        
-            <div class="formContent">
-                <h4>Contact Form</h4>
-                <form>
-                    <div class="nameInputWrapper"><label for="nameContactForm">Name:</label>
-                        <input type="text" id="nameContactForm">
-                    </div>
+                    En nuestro equipo realizamos educación, divulgación y comunicación de la ciencia aplicada al arte.
+                </p>
 
-                    <div><label for="surnameContactForm">Surname:</label>
-                        <input type="text" id="surnameContactForm">
-                    </div>
-                    <div>
-                        <label for="emailContactForm">Email:</label>
-
-                        <input type="email" id="emailContactForm">
-                    </div>
-                    <div><label for="bDateContactForm">Birth Date</label>
-                        <input type="date" id="bDateContactForm">
-                    </div>
-                    <div><label for="messageContactForm">Message</label>
-                        <input type="text" id="messageContactForm">
-                    </div>
-
-                    <input type="button" value="submit   ">
-                </form>
+                <div class="data-content">
+                    <section class="contact__form">
+                        <h4>Contact Us</h4>
+                        <input class="inputs" name="nombre" id="nombre" placeholder="Ingrese su nombre">
+                        <input class="inputs" name="apellido" id="apellido" placeholder="Ingrese su Apellido">
+                        <input class="inputs" name="pais" id="pais" placeholder="Ingrese su País">
+                        <input class="inputs" name="correo" id="correo" placeholder="Ingrese su Correo">
+                        <input class="form__btn" type="submit" value="Enviar">
+                    </section>
+                    <section class="maps">
+                        <div class="mapouter">
+                            <div class="gmap_canvas"><iframe width="400" height="400" id="gmap_canvas"
+                                    src="https://maps.google.com/maps?q=iceland&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+                                    href="https://123movies-to.org"></a><br>
+                                <style>
+                                    .mapouter {
+                                        position: relative;
+                                        text-align: right;
+                                        height: 400px;
+                                        width: 400px;
+                                    }
+                                </style><a href="https://www.embedgooglemap.net">embed a google map</a>
+                                <style>
+                                    .gmap_canvas {
+                                        overflow: hidden;
+                                        background: none !important;
+                                        height: 400px;
+                                        width: 400px;
+                                    }
+                                </style>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </div>
-        </div>
         </section>
     </main>
-    <div class="footer-content">
-        <footer>
-            <ul class="socials">
-                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitch"></i></a></li>
-                <li><a href="#"><i class="fa fa-github"></i></a></li>
 
-            </ul>
-            <p>© 2021 Muted Instruments | Address: Florida, Buenos Aires, Argentina</p>
-        </footer>
-    </div>
+    <footer>
+        <ul class="socials">
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitch"></i></a></li>
+            <li><a href="#"><i class="fa fa-github"></i></a></li>
+
+        </ul>
+        <p>© 2021 Muted Instruments | Address: Florida, Buenos Aires, Argentina</p>
+    </footer>
+
     <script src="../static/js/headerjs.js"></script>
 </body>
 
