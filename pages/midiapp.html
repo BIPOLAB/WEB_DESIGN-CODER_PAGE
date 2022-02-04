@@ -5,12 +5,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Muted Editor APP</title>
-  <title>WebMidi.js Quick Start</title>
+  
   <!-- IMPORT WEBMIDI JS -->
   <script src="https://cdn.jsdelivr.net/npm/webmidi@next/dist/iife/webmidi.iife.js"></script>
 
   <!-- USB DETECT -->
-  <script src="../static/js/helpers/usbdetect.js"></script>
+  <!-- <script src="../static/js/helpers/usbdetect.js"></script> -->
   <!-- <script src="../static/js/helpers/serial.js"></script>
     <script src="../static/js/helpers/console.js"></script> --> 
   <!-- END USB DETECT -->
@@ -70,15 +70,24 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 id="tituloVentana">Muted Instruments Editor v1.0.0</h5>
+          <h5 id="tituloVentana"> <strong>ABOUT</strong></h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
 
 
         <div class="modal-body">
-          <div class="alert alert-success">
-            <h6><strong>Under Construction</strong></h6>
-          </div>
+          <h6  class="text-center"><strong>Muted Instruments 2015-2021</strong></h6>
+          <h6  class="text-center">Midi Editor v1.0.0</h6>
+            <hr>
+            <p class="text-center">Developers:</p>
+            <p class="text-center fw-light" >Leonardo Contarino</p>
+            <p class="text-center fw-light" >Rodrigo Contarino</p>
+            <p class="text-center fw-light" >Alvaro Capello</p>
+            <hr>
+            <p class="text-center">UI Design:</p>
+            <p class="text-center fw-light" >Leonardo Contarino</p>
+            <p class="text-center fw-light" >Alvaro Capello</p>
+      
         </div>
 
         <div class="modal-footer">
@@ -159,7 +168,7 @@
 
 
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -241,7 +250,8 @@
         </ul>
 
       </div>
-      <a class="navbar-brand" href="#">Muted Editor APP</a>
+      <img src="../images/muted_editor_app.png" alt="muted editor logo" width="150px">
+      
     </div>
   </nav>
 
