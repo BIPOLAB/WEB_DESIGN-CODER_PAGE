@@ -1,0 +1,97 @@
+/******PRODUCTS CARDS*****/
+
+.card__products__item{
+    width: 385px;
+    height: 530px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+    background-color:$color-white;
+    overflow: hidden;
+    margin:20px;
+    margin-top: 0px;
+    text-align: center;
+    flex-direction: column;
+    transition: all 0.65s;
+    img{
+        width: 500px;
+        height: 313px;
+        object-fit: cover;
+    }
+    h3{font-weight: 600;}
+    p{
+        color:$color-black;
+        /*display: none;*/
+        padding:0 1rem;
+        font-size: 12px;
+        font-weight: 300;
+    }
+    &:hover{
+        transform:translateY(-2px);
+        box-shadow: 0 12px 16px rgba(0,0,0,0.1) ;
+    }
+    }
+
+.productsWrapper button{
+    margin-top: 30px;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 5px 20px;
+    width: 100px;
+    border-radius: 50px;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    color: $color-white;
+    background-color: $color-purple;
+    &:hover{
+        background-color:$color-pink;
+    }
+}
+
+/******PROJECTS CARDS*****/
+    .card__projects__item{
+        width: 385px;
+        height: 200px;
+        border-radius: 8px;
+        box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+        background-color:$color-white;
+        overflow: hidden;
+        margin:20px;
+        margin-top: 0px;
+        text-align: center;
+        flex-direction: column;
+        transition: all 0.65s;
+        &:hover{
+            transform:translateY(-2px);
+            box-shadow: 0 12px 16px rgba(0,0,0,0.1) ;
+        }
+        img{
+            width: 130px;
+            height: 43px;
+            object-fit: cover;
+        }
+        h3{font-weight: 600;}
+        p{
+            color: black;
+            /*display: none;*/
+            padding:0 1rem;
+            font-size: 12px;
+            font-weight: 300;
+        }
+        
+    }
+
+.projectsWrapper button{
+    margin-top: 20px;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 5px 10px;
+    width: 100px;
+    border-radius: 50px;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    color: $color-white;
+    background-color: $color-purple;
+    &:hover{
+        background-color: $color-pink;
+    }
+}

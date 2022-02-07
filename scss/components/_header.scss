@@ -1,0 +1,85 @@
+/******** HEADER ********/
+header{
+    display: flex;
+    width: 100%;
+    margin-bottom: 2px;
+}
+#menu {
+    background-color: $color-black;
+    z-index: 1;
+    height: 100px;
+    width: 100%;
+    /**** position:fixed;***/
+    display:flex;
+    
+    top:0;
+    left:0;
+    right: 0;
+    justify-content: space-between;
+    padding: 0 5%;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+
+
+.mutedLogo{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Rock 3D', cursive;
+    font-size: 25px;
+    color: $color-white;
+    cursor: pointer ;
+}
+
+/* HAM BUTTON */
+.btn_menu{
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    padding-top: 5px;
+    display:none;
+}
+
+ul.show{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    top:150px;
+    z-index: 1;    
+}
+
+/* END HEADER */
+
+/******* MAIN NAVBAR ********/
+
+.menu-items{
+    display: flex;
+    list-style: none;
+}
+
+.menu-items li {
+    border-radius: 3px;
+    margin:0 5px;
+}
+
+.menu-items li a {
+    padding: 12px 8px;
+    text-decoration: none;
+    font-size: 15px;
+    display:block;
+    text-transform: uppercase;
+    cursor:pointer;
+    transition: 0.5s;
+    color:$color-white;
+    font-weight:bolder;
+}
+
+.menu-items li a:hover {
+    color: $color-green;
+    font-weight: bold;
+}
+
+/* END MAIN NAVBAR */
+

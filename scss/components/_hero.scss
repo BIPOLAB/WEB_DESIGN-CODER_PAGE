@@ -1,0 +1,88 @@
+/******* INDEX HERO  *******/
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 600px ;
+    width: auto;
+    color:  $color-white;
+    background-image: 
+    url("/images/heros/index_hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;  
+}
+
+
+/***** PRODUCTS HERO *****/ 
+#productsHero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 680px ;
+    width: 100%;
+    color:  $color-white;
+    background-image: url("/images/heros/products_Hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+/***** PROJECTS HERO *****/ 
+#projectsHero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 680px ;
+    width: 100%;
+    color:  $color-white;
+    background-image: url("/images/heros/projects_hero.PNG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+/***** SUPPORT HERO *****/ 
+#supportHero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 500px ;
+    width: 100%;
+    color:  $color-white;
+    background-image: url("/images/heros/support.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#supportHero h1{
+    color: $color-red;
+    font-size: 70px;
+}
+
+
+/******* ABOUTUS HERO *******/
+#aboutHero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 800px ;
+    width: auto;
+    color:  $color-black;
+    background-image: linear-gradient(
+        0deg,
+        rgba(100, 231, 74, 0.08),
+        rgba(100, 231, 74, 0.08)
+    )
+    ,url("/images/heros/teamwork-g683511f43_1920.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}

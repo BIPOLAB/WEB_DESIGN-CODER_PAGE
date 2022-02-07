@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    max-width: 100%;
+}
+body{
+    background-color: white;
+    font-family: 'Titillium Web', sans-serif;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+h1{font-size: 3.5em;}
+h2{font-size: 2.7em;}
+h3{font-size: 2em;}
+p{font-size: 1.25em;}
+
+
+.main__wrapper{
+    background-color: white;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.main__grid__item{
+    position: relative;
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+
+/***** COURSES  PAGE *****/ 
+.coursesWrapper{
+    background-color: rgb(44, 44, 44);
+    width: 100%;
+    max-width: auto;
+    height: 600px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    }
+    .coursesWrapper h2{
+        letter-spacing: 0.65rem;
+        width: 100vw;
+        height: 60px;
+        margin-top: 60px;
+        font-family: 'Righteous', cursive;
+        font-size: 3em;
+        color: rgb(243, 241, 208);
+        
+    }
+    
+    .coursesWrapper h3{color: rgb(134, 194, 50);}
+

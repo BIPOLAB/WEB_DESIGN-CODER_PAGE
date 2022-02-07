@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muted Instruments</title>
-    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/css/main.css">
     <!--Script Para Efecto en header-->
 
     <!--Fuentes de GOOGLE-->
@@ -19,6 +19,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet"> 
+
+    <!-- ANIMATE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <!--FONTAWESOME-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
@@ -31,20 +36,22 @@
         <!-- <img src="../images/logo.png" alt="logo" class="logo">-->
 
         <nav id="menu">
-            <label class="mutedLogo">Muted Instruments <a href="/index.html"></a></label>
+            <div class="mutedLogo">
+                <span>Muted</span> <a href="/index.html"></a>
+                <span>Instruments</span> <a href="/index.html"></a>
+            </div>
             <ul class="menu-items">
-                <li><a href="../index.html">HOME</a></li>
-                <li><a href="./products.html">PRODUCTS</a></li>
-                <li><a href="./projects.html">PROJECTS</a></li>
-                <li><a href="./support.html">SUPPORT</a></li>
-                <li><a href="./aboutus.html">ABOUT</a></li>
-                <li><a href="./midiapp.html">TOOLS</a></li>
+                <li><a href="../index.html">HOME</a><img src="" alt=""></li>
+                <li><a href="products.html">PRODUCTS</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a href="support.html">SUPPORT</a></li>
+                <li><a href="aboutus.html">ABOUT</a></li>
+                <li><a href="midiapp.html">TOOLS</a></li>
             </ul>
             <span class="btn_menu">
                 <i class="fa fa-bars"></i>
             </span>
         </nav>
-
     </header>
     <main>
         <section id="aboutHero">
@@ -60,17 +67,56 @@
                 </p>
 
                 <div class="data-content">
-                    <section class="contact__form">
-                        <h4>Contact Us</h4>
-                        <input class="inputs" name="nombre" id="nombre" placeholder="Ingrese su nombre">
-                        <input class="inputs" name="apellido" id="apellido" placeholder="Ingrese su Apellido">
-                        <input class="inputs" name="pais" id="pais" placeholder="Ingrese su País">
-                        <input class="inputs" name="correo" id="correo" placeholder="Ingrese su Correo">
-                        <input class="form__btn" type="submit" value="Enviar">
-                    </section>
-                    <section class="maps">
+                    <div class="contact__form">
+                        <h3 class="form__logo">Contact <span>Us</span></h3>
+                        <form action="">
+                            <p>
+                                <label>Full Name</label>
+                                <input type="text" name="fullName">
+                            </p>
+
+                            <p>
+                                <label>Email</label>
+                                <input type="email" name="email">
+                            </p>
+
+                            <p>
+                                <label>Phone</label>
+                                <input type="tel" name="phone">
+                            </p>
+
+                            <p>
+                                <label>City</label>
+                                <input type="text" name="city">
+                            </p>
+
+                            <p class="block">
+                                <label>Message</label>
+                                <textarea name="message" id="" cols="30" rows="3"></textarea>
+                            </p>
+
+                            <p class="block"><button type="submit">Send</button></p>
+
+                        </form>
+                    </div>
+                    <div class="contact__info">
+                        <h4>More Info</h4>
+                        <ul>
+                            <li> <i class="fa fa-map-marker"> Agustin Alvarez</i></li>
+                            <li> <i class="fa fa-phone"> 156586xxxx</i></li>
+                            <li> <i class="fa fa-envelope-open"> soporte@bipolab.com.ar</i></li>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Consequatur laboriosam doloremque, obcaecati voluptates
+                            ipsa doloribus perspiciatis repudiandae
+                        </p>
+                        <p>Muted Instruments</p>
+
+                    </div>
+
+                    <div class="contact__map">
                         <div class="mapouter">
-                            <div class="gmap_canvas"><iframe width="400" height="400" id="gmap_canvas"
+                            <div class="gmap_canvas"><iframe width="500" height="400" id="gmap_canvas"
                                     src="https://maps.google.com/maps?q=iceland&t=&z=13&ie=UTF8&iwloc=&output=embed"
                                     frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
                                     href="https://123movies-to.org"></a><br>
@@ -79,7 +125,7 @@
                                         position: relative;
                                         text-align: right;
                                         height: 400px;
-                                        width: 400px;
+                                        width: 450px;
                                     }
                                 </style><a href="https://www.embedgooglemap.net">embed a google map</a>
                                 <style>
@@ -87,12 +133,12 @@
                                         overflow: hidden;
                                         background: none !important;
                                         height: 400px;
-                                        width: 400px;
+                                        width: 450px;
                                     }
                                 </style>
                             </div>
                         </div>
-                    </section>
+                    </div>
                 </div>
             </div>
         </section>
