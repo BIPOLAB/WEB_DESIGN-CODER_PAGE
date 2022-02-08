@@ -68,7 +68,7 @@
     }
     .subMenu-items li a {
         padding: 12px 8px;
-        font-size: 15px;
+        font-size: 16px;
         display:block;
         text-transform: lowercase;
         cursor:pointer;
@@ -108,7 +108,17 @@
 
 
 @media (min-width:850px){
-    .productsWrapper{display: grid;
+    .productsWrapper{
+        display: grid;
+        grid-template-columns: repeat(3,430px);
+        width: 100vw;
+        max-width: auto;
+        height: auto;
+        justify-content: center;
+        text-align: center;
+    }
+    .projectsWrapper{
+        display: grid;
         grid-template-columns: repeat(3,430px);
         width: 100vw;
         max-width: auto;
@@ -126,3 +136,12 @@
     }
 }
 
+@media  (max-width: 445px) {
+    .subMenu-items li a{
+        font-size: 10px;
+        
+    }
+    .products__submenu{
+        padding: 0 1.5%;
+    }
+}

@@ -1,7 +1,7 @@
 /******PRODUCTS CARDS*****/
 
 .card__products__item{
-    width: 385px;
+    width: 400px;
     height: 530px;
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba(0,0,0,0.1);
@@ -13,16 +13,16 @@
     flex-direction: column;
     transition: all 0.65s;
     img{
-        width: 500px;
-        height: 313px;
-        object-fit: cover;
+        width: 400px;
+        height: 300px;
+        object-fit:fill;
     }
     h3{font-weight: 600;}
     p{
         color:$color-black;
         /*display: none;*/
         padding:0 1rem;
-        font-size: 12px;
+        font-size: 16px;
         font-weight: 300;
     }
     &:hover{
@@ -49,7 +49,7 @@
 
 /******PROJECTS CARDS*****/
     .card__projects__item{
-        width: 385px;
+        width: 400px;
         height: 200px;
         border-radius: 8px;
         box-shadow: 0 2px 2px rgba(0,0,0,0.1);

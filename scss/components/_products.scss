@@ -1,27 +1,31 @@
 /* PRODUCT PAGE  */
 .main__grid__container{
+    
     display: grid;
-    grid-template-columns: 1fr 1fr ;
-    padding-left: 20px;
-    padding-right: 20px;
-    grid-gap:16px;
+grid-template-columns: repeat(2,1fr);
+padding-left: 60px;
+padding-right: 60px;
+grid-gap: 16px;
     
 }
 .grid__colum{
     display: flex;
     flex-direction: column;
     margin-bottom: 16px;
+   
     h3{
+        margin-top: 10px;
         font-family: 'Quicksand', sans-serif;
         color:$color-white;
     }
+    
 }
 
 .grid__img{
     display: flex;
     width: 100%;
     border-radius: 2px;
-    background-color:rgba(251, 252, 249, 0.959);;
+    background-color: $color-gray;
     overflow: hidden;
     justify-content: center;
     align-items: center;
@@ -48,8 +52,8 @@
 
 /* PRODUCTS SUBMENU */
 
-#products__subMenu{
-    background-color: $color-black;
+.products__subMenu{
+    background-color: rgb(0, 0, 0);
     height: 50px;
     width: 100%;
     display:flex;
@@ -78,7 +82,7 @@
     text-transform: lowercase;
     cursor:pointer;
     transition: 0.5s;
-    color: $color-white ;
+    color:white ;
     font-weight:lighter;
 }
 

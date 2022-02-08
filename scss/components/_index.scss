@@ -27,6 +27,16 @@
     color: $color-green;
 }
 
+.projects h2{
+    text-align: center;
+    letter-spacing: 0.8rem;
+    width: 100%;
+    height: 60px;
+    font-family: 'Righteous', cursive;
+    font-size: 2em;
+    color: #00ff88;
+}
+
 .productsWrapper{
     background-color: $color-black;
     width: 100vw;
