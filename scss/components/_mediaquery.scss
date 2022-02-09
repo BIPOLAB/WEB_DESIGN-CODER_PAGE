@@ -4,6 +4,10 @@
     
     .main__grid__container{
         display: block;
+       
+    }
+    main{
+        margin-top: 70px;
     }
     .mutedLogo {
         display: none;
@@ -11,6 +15,7 @@
     }
     header{
         width: 100%;
+        position: fixed;
         
     }
     #menu {
@@ -18,7 +23,8 @@
         width: 100%;
     }
     .btn_menu{
-        display:block;      
+        display:block;  
+        position: fixed;    
     }
     
     .menu-items{
@@ -27,8 +33,8 @@
 
 
     .menu-items.show{
-        display: block;
-        justify-content: flex-start;
+        display: block; 
+        position: fixed;       
         background-color:$color-black;
         width: 100%;
         height:100vh;   
@@ -36,8 +42,8 @@
         transition: all .4s;
         left: 0%;   
         right: 0%;
-        top: 50px;
-        position: fixed;
+        top: 70px;
+        
     }
     .menu-items li{
         display: block;
@@ -49,10 +55,10 @@
         }
 
     .menu-items li a{
-        font-size: 20px;
+        font-size: 15px;
+        outline: 0;
         border-bottom: 1px solid $color-white;
         color: $color-white;
-        font-weight: bold;
         }
 
     .menu-items li a:hover{

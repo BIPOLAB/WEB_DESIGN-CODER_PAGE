@@ -1,5 +1,6 @@
 /******** HEADER ********/
 header{
+    font-family: 'Quicksand', sans-serif;
     display: flex;
     z-index: 1;
     width: 100%;
@@ -9,7 +10,6 @@ header{
 }
 #menu {
     display:flex;
-    
     z-index: 1;
     top: 0;
     background-color: $color-black;
@@ -28,10 +28,14 @@ header{
 .mutedLogo{
     display: flex;
     flex-direction: column;
-    font-family: 'Rock 3D', cursive;
-    font-size: 25px;
+   
     color: $color-white;
     cursor: pointer ;
+    span{
+        padding: 0;
+        margin-top: 0;
+        font-size: 25px;
+    }
 }
 
 /* HAM BUTTON */
@@ -62,12 +66,13 @@ ul.show{
 }
 
 .menu-items li {
+    // letter-spacing: 1px;
     border-radius: 3px;
     margin:0 5px;
 }
 
 .menu-items li a {
-    padding: 12px 8px;
+    padding: 20px 8px;
     text-decoration: none;
     font-size: 15px;
     display:block;
@@ -75,13 +80,14 @@ ul.show{
     cursor:pointer;
     transition: 0.5s;
     color:$color-white;
-    font-weight:bolder;
+    // font-weight:bolder;
+    &:hover {
+        color: $color-aqua;
+       
+    }
 }
 
-.menu-items li a:hover {
-    color: $color-green;
-    font-weight: bold;
-}
+
 
 /* END MAIN NAVBAR */
 

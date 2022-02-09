@@ -1,55 +1,63 @@
-/*
-  Simple test that just prints all connected MIDI devices
-*/
+console.clear()
 
-window.onload = function () {
-    let div = document.getElementById('container');
-    let midiAccess;
+if(navigator.requestMIDIAccess) {
+  navigator.requestMIDIAccess({
+    sysex: false
+  }).then(function(midiAccess) {
+    midiAccess.onstatechange = function() {
+      populateIO(midiAccess)
+    };
+    
+    populateIO(midiAccess);
+  });
+}
 
-    if (navigator.requestMIDIAccess !== undefined) {
-        navigator.requestMIDIAccess().then(
-            (access) => {
-                midiAccess = access;
-                // create a list of all connected MIDI devices
-                showMIDIPorts();
-                // reload list as devices get connected or disconnected
-                midiAccess.onstatechange = showMIDIPorts;
-            },
-            (e) => {
-                // something went wrong while requesting the MIDI devices
-                div.innerHTML = e.message;
-            },
-        );
-    } else {
-        // browsers without WebMIDI API and Jazz plugin
-        div.innerHTML = 'No access to MIDI devices: browser does not support WebMIDI API, please use the WebMIDIAPIShim together with the Jazz plugin';
-    }
-
-
-    function showMIDIPorts() {
-        let
-            divInputs = document.getElementById('inputs'),
-            divOutputs = document.getElementById('outputs'),
-            inputs = midiAccess.inputs,
-            outputs = midiAccess.outputs,
-            html;
-
-        html = '<h4>midi inputs:</h4>';
-        inputs.forEach((port) => {
-            html += port.name + '<br>';
-            html += '<span class="small">manufacturer: ' + port.manufacturer + '</span><br>';
-            html += '<span class="small">version: ' + port.version + '</span><br>';
-            html += '<span class="small">id: ' + port.id + '</span><br><br>';
-        });
-        divInputs.innerHTML = html;
-
-        html = '<h4>midi outputs:</h4>';
-        outputs.forEach((port) => {
-            html += port.name + '<br>';
-            html += '<span class="small">manufacturer: ' + port.manufacturer + '</span><br>';
-            html += '<span class="small">version: ' + port.version + '</span><br>';
-            html += '<span class="small">id: ' + port.id + '</span><br><br>';
-        });
-        divOutputs.innerHTML = html;
-    }
+function populateIO(midiAccess) {
+  window.midiAccess = midiAccess;
+  populateInputs(midiAccess);
+  populateOutputs(midiAccess);
 };
+
+function populateInputs(midiAccess) {
+  var select = document.getElementById('inputs');
+  select.innerHTML = '';
+  midiAccess.inputs.forEach(function(input) {
+    var option = document.createElement('option');
+    option.setAttribute('value', input.id);
+    option.innerText = input.name;
+    select.appendChild(option);
+  });
+  
+  var initialize = function() {
+    window.input = midiAccess.inputs.get(select.value);
+    if(window.input) {
+      window.input.onmidimessage = midiMessage;
+    }
+  };
+  
+  select.addEventListener('change', initialize);
+  initialize();
+};
+
+function populateOutputs(midiAccess) {
+  var select = document.getElementById('outputs');
+  select.innerHTML = '';
+  midiAccess.outputs.forEach(function(output) {
+    var option = document.createElement('option');
+    option.setAttribute('value', output.id);
+    option.innerText = output.name;
+    select.appendChild(option);
+  });
+  
+  select.addEventListener('change', function() {
+    window.output = midiAccess.outputs.get(select.value);
+  });
+  
+  window.output = midiAccess.outputs.get(select.value);
+};
+
+function midiMessage(message) {
+  if(message.data[0] === 248) return; // ignore clocking messages
+  
+  console.log(message.data)
+}

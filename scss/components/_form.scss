@@ -10,14 +10,14 @@ padding: 1em;
         text-align: center;
         font-size: 3em;
         span{
-            color: $color-yellow
+            color: $color-aqua
         };
 
     }   
 }
 
 .contact__form {
-    border: 1px solid $color-white;
+    background-color: $color-contactinfo-bg;
     font-family: 'Quicksand', sans-serif;
     h3{color: $color-white;}
     p{color: $color-white;}
@@ -40,30 +40,30 @@ padding: 1em;
         border:none;
         outline: none;
         color: $color-white;
-        background-color: black;
-        border-bottom: 1px solid $color-yellow;
+        background-color: $color-contactinfo-bg;
+        border-bottom: 1px solid $color-aqua;
     }
     textarea{
         width: 100%;
         padding: .7em;
         border:none;
         outline: none;
+        resize: none;
         color: $color-white;
-        background-color: $color-black;
-        border-bottom: 1px solid $color-yellow;
+        background-color: $color-contactinfo-bg;;
+        border-bottom: 1px solid $color-aqua;
     }
     
 }
 .contact__info{
     font-family: 'Quicksand', sans-serif;
-    background-color: $color-contactinfo-bg;
-    
+
 }
 .contact__info h4,p,ul
     {
     color: $color-white;
     text-align: center;
-    margin: 0 0 1rem 0;
+    margin: 0 0 1em 0;
     
 }
 .contact__info ul{
@@ -74,11 +74,19 @@ padding: 1em;
     }
 }
 
+.contact__map{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    background-color: white;
+}
+
 button{
     font-weight: 500;
     width: 100%;
     padding: 1em;
-    background-color: $color-yellow;
+    background-color: $color-aqua-mat;
     color: $color-black;
     border:0;
     text-transform: uppercase;
@@ -86,5 +94,5 @@ button{
 }
 button:hover{
     transition: background-color 1s ease-out;
-    background-color: rgba(255,255,0,1);
+    background-color: $color-aqua;
 }
