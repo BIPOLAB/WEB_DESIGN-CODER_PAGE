@@ -5,16 +5,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Muted Editor APP</title>
-  
+
   <!-- IMPORT WEBMIDI JS -->
   <script src="https://cdn.jsdelivr.net/npm/webmidi@next/dist/iife/webmidi.iife.js"></script>
 
   <!-- USB DETECT -->
   <!-- <script src="../static/js/helpers/usbdetect.js"></script> -->
   <!-- <script src="../static/js/helpers/serial.js"></script>
-    <script src="../static/js/helpers/console.js"></script> --> 
+    <script src="../static/js/helpers/console.js"></script> -->
   <!-- END USB DETECT -->
-  
+
   <!--Fuentes de GOOGLE-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,19 +25,23 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
   <!--FONTAWESOME-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" />
 
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
 
-
+     <link rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css">
   <!-- IMPORT BOOTSTRAP STYLESHEET -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
   <!-- END IMPORT BOOTSTRAP -->
 
-  <link rel="stylesheet" href="../static/appStyle.css">
+  <link rel="stylesheet" href="../static/css/main.css">
 
 </head>
 
@@ -55,18 +59,18 @@
 
 
         <div class="modal-body">
-          <h6  class="text-center"><strong>Muted Instruments 2015-2021</strong></h6>
-          <h6  class="text-center">Midi Editor v1.0.0</h6>
-            <hr>
-            <p class="text-center">Developers:</p>
-            <p class="text-center fw-light" >Leonardo Contarino</p>
-            <p class="text-center fw-light" >Rodrigo Contarino</p>
-            <p class="text-center fw-light" >Alvaro Capello</p>
-            <hr>
-            <p class="text-center">UI Design:</p>
-            <p class="text-center fw-light" >Leonardo Contarino</p>
-            <p class="text-center fw-light" >Alvaro Capello</p>
-      
+          <h6 class="text-center"><strong>Muted Instruments 2015-2021</strong></h6>
+          <h6 class="text-center">Midi Editor v1.0.0</h6>
+          <hr>
+          <p class="text-center">Developers:</p>
+          <p class="text-center fw-light">Leonardo Contarino</p>
+          <p class="text-center fw-light">Rodrigo Contarino</p>
+          <p class="text-center fw-light">Alvaro Capello</p>
+          <hr>
+          <p class="text-center">UI Design:</p>
+          <p class="text-center fw-light">Leonardo Contarino</p>
+          <p class="text-center fw-light">Alvaro Capello</p>
+
         </div>
 
         <div class="modal-footer">
@@ -90,14 +94,14 @@
         <div class="modal-body">
           <table class="table table-striped">
             <tr>
-              
+
               <th>FROM</th>
               <th>Channel</th>
               <th>Data 1</th>
               <th>Data 2</th>
-              
+
               <th>Data 3</th>
-              
+
             </tr>
             <tr>
               <td>MAPLE</td>
@@ -106,7 +110,7 @@
               <td>7F</td>
               <td>Note OFF</td>
             </tr>
-            
+
           </table>
         </div>
       </div>
@@ -204,43 +208,228 @@
 
       </div>
       <img src="../images/muted_editor_app.png" alt="muted editor logo" width="150px">
-      
+
     </div>
   </nav>
-  <div class="midi-io-selects">
-    <div class="form-group">
-      <label for="inputs">Inputs:</label>
-      <select name="inputs" id="inputs"></select>
+
+
+  <main class="global__main__app">
+
+
+    <!-- <div class="left__column">
+
+    </div> -->
+    <div class="app__container">
+      <div class="app__header">
+        <h4>CONTROLLER</h4>
+        <h4>|</h4>
+        <h4>GLOBAL CONFIG</h4>
+      </div>
+      <div class="app__controller">
+        <div class="pads__container">
+          <div class="controller__pads">
+            <div class="pads" id="pad_01">
+
+            </div>
+            <div class="pads" id="pad_02">
+
+            </div>
+            <div class="pads" id="pad_03">
+
+            </div>
+            <div class="pads" id="pad_04">
+
+            </div>
+            <div class="pads" id="pad_05">
+
+            </div>
+            <div class="pads" id="pad_06">
+
+            </div>
+            <div class="pads" id="pad_07">
+
+            </div>
+            <div class="pads" id="pad_08">
+
+            </div>
+          </div>
+        </div>
+        <div class="display__container">
+          Chanel 01
+        </div>
+        <div class="mmc__container">
+          <div class="mmc__scroll">
+            <img src="../images/appui/metal-knob_01-01.png" alt="" width="100px">
+          </div>
+          <div class="controller__mmc">
+
+            <div class="mmc__button">
+              <i class="fa fa-play"> </i>
+            </div>
+            <div class="mmc__button">
+              <i class="fa fa-stop"> </i>
+            </div>
+            <div class="mmc__button">
+              <i class="fa fa-backward"> </i>
+            </div>
+            <div class="mmc__button">
+              <i class="fa fa-forward"> </i>
+            </div>
+            <div class="mmc__button">
+              <i class="fa fa-pause"> </i>
+            </div>
+            <div class="mmc__button">
+              <i class="fa fa-circle"> </i>
+            </div>
+            <div class="mmc__button">
+              <i class="fa fa-arrow-left"> </i>
+            </div>
+            <div class="mmc__button">
+              <i class="fa fa-arrow-right"> </i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
     </div>
-    <div class="form-group">
-      <label for="outputs">Outputs:</label>
-      <select name="outputs" id="outputs"></select>
+    <!-- <div class="app__header">
+        <h4>CONTROLLER</h4>
+        <h4>|</h4>
+        <h4>GLOBAL CONFIG</h4>
+      </div> -->
+    <!-- <div class="controller__wrapper">
+
+      </div> -->
+
+
+    <!--  <div class="container">
+      <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+          DEVICE     
+        </a>
+      
+        <ul class="dropdown-menu" id="inputs" aria-labelledby="dropdownMenuLink">
+          
+        </ul>
+      </div>
+  </div>
+    <div class="midi-io-selects">
+      <div class="form-group">
+        <label for="inputs">Inputs:</label>
+        <select name="inputs" id="inputss"></select>
+      </div>
+      <div class="form-group">
+        <label for="outputs">Outputs:</label>
+        <select name="outputs" id="outputs"></select>
+      </div> 
+    </div>-->
+  </main>
+  <div class="app__footer">
+    <!-- <h3> APP FOOTER</h3> -->
+    <label class="drop__label">Mode Selector</label>
+    <div class="drop__menu">
+      <div class="drop__modeBtn">
+        <span>Select</span>
+        <i class="fas fa-caret-down"></i>
+      </div>
+      <div class="drop__content">
+        <ul class="drop__options">
+          <li>Off</li>
+          <li>MIDI Note</li>
+          <li>Program Change</li>
+          <li>Control Change</li>
+          <li>NRPN / RPN</li>
+          <li> Switched Control</li>
+          <li>MMC</li>
+        </ul>
+      </div>
+    </div>
+    <!-- END MODE DROPDOWN -->
+    <!-- DROP CHANNEL -->
+    <label class="drop__label">Channel</label>
+    <div class="channel__dropMenu">
+      <div class="channel__dropBtn">
+        <span>Select</span>
+        <i class="fas fa-caret-down"></i>
+      </div>
+      <div class="channel__dropContent">
+        <ul class="drop__channels">
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li>7</li>
+          <li>8</li>
+          <li>9</li>
+          <li>10</li>
+          <li>11</li>
+          <li>12</li>
+          <li>13</li>
+          <li>14</li>
+          <li>15</li>
+          <li>16</li>
+        </ul>
+      </div>
+    </div>
+    <!-- END DROP CHANNEL -->
+
+    <!-- DROP NOTE -->
+    <label class="drop__label">Note/CC</label>
+    <div class="note__dropMenu">
+      <div class="note__dropBtn">
+        <span>Select</span>
+        <i class="fas fa-caret-down"></i>
+      </div>
+      <div class="note__dropContent">
+        <ul class="drop__note">
+          <li>C1</li>
+          <li>C#1</li>
+          <li>D1</li>
+          <li>D#1</li>
+          <li>E1</li>
+          <li>F1</li>
+          <li>F#1</li>
+          <li>G</li>
+          <li>G#1</li>
+          <li>A1</li>
+          <li>A#1</li>
+          <li>B1</li>
+          <li>C2</li>
+          <li>C#2</li>
+          <li>D2</li>
+          <li>D#2</li>
+        </ul>
+      </div>
+    </div>
+    <!-- END DROP MENU -->
+    <div class="status__gridContainer">
+    <div class="status__grid">
+    <label class="status__item">STATUS</label>
+    <div class="status__item">
+      <i class="fab fa-usb" id="usb__icon"></i>
+    </div>
+    <label class="status__item">SYNC</label>
+    <div class="status__item">
+      <i class="fa-solid fa-rocket"></i>
     </div>
   </div>
-
-  <div class="container">
-
-    
-
-    <div class="header" style="background-color: red;">HEADER</div>
-    <div class="aside" style="background-color: aqua;">ASIDE</div>
-    <div class="main" style="background-color: greenyellow;">MAIN CONTAINER</div>
-    <div class="footer" style="background-color: purple;">APP FOOTER</div>
-
+</div>
   </div>
 
 
-
-  <footer>
+  <!-- <footer>
     <ul class="socials">
-      <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-      <li><a href="#"><i class="fa fa-twitch"></i></a></li>
-      <li><a href="#"><i class="fa fa-github"></i></a></li>
+      <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fab fa-twitch"></i></a></li>
+      <li><a href="#"><i class="fab fa-github"></i></a></li>
     </ul>
     <p>© 2021 Muted Instruments | Address: Florida, Buenos Aires, Argentina</p>
 
-  </footer>
+  </footer> -->
 
 
 
@@ -251,6 +440,7 @@
   <!-- END BOOTSTRAP SCRIPT -->
 
   <script src="../static/js/midiapp.js"></script>
+  <script src="../static/js/app_ui_actions.js"></script>
 
 
 </body>

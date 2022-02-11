@@ -1,7 +1,9 @@
 /******** HEADER ********/
 header{
     font-family: 'Quicksand', sans-serif;
+    background-color: black;
     display: flex;
+    position: fixed;
     z-index: 1;
     width: 100%;
     height: 80px;

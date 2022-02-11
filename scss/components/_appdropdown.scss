@@ -1,0 +1,237 @@
+//  MODE DROPDOWN
+.drop__menu{
+    width:140px;
+    position: relative;
+    
+    .drop__modeBtn{
+        display: flex;
+        padding: 0 10px;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(58, 58, 58);
+        border: 1px solid rgb(58, 58, 58);
+        border-radius: 5px;
+        color: rgb(255, 255, 255);
+        i{
+            font-weight: 100;
+            font-size: 20px;
+            transition:transform  0.3s linear;
+        }
+    }
+    
+}
+
+.drop__label{
+    margin: 0px  5px;
+}
+.drop__content {
+    display: none;
+    background-color:  rgb(58, 58, 58);
+    .drop__options{
+        
+        margin-top: 2px;
+        li{
+            padding: 0  10px;
+            list-style: none;
+            height: 25px ;
+        }
+        li:hover{
+            box-shadow : 0px 0px 5px rgba(255, 255, 255, 0.8);
+            border-top: 1px solid rgba(255, 255, 255, 0.5);;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);;
+            background-color: $color-green;
+            color: black;
+        }
+    }
+    
+}
+
+.drop__menu.active .drop__content{
+    display: block;
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    z-index: 1;
+    height: 180px;
+    border: 1px solid white;
+    background-color: $color-dark-gray;
+    box-shadow : 0px  1px  5px rgba(255, 255, 255, 0.8);
+    
+}
+
+.drop__menu.active .drop__modeBtn  i{ 
+    
+    transform: rotate(-180deg);
+    color: $color-aqua;
+    
+}
+
+// CHANNEL DROPDOWN
+  
+.channel__dropMenu{
+    width:140px;
+    position: relative;
+    
+    .channel__dropBtn{
+        display: flex;
+        padding: 0 10px;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(58, 58, 58);
+        border: 1px solid rgb(58, 58, 58);
+        border-radius: 5px;
+        color: rgb(255, 255, 255);
+        i{
+            font-weight: 100;
+            font-size: 20px;
+            transition:transform  0.3s linear;
+        }
+    }
+    
+}
+
+.channel__dropLabel{
+    margin: 0px  5px;
+}
+.channel__dropContent::-webkit-scrollbar{
+    width: 7px;
+}
+.channel__dropContent::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 25px;
+}
+.channel__dropContent::-webkit-scrollbar-thumb {
+    background: $color-aqua;
+    border-radius: 25px;
+}
+.channel__dropContent {
+    display: none;
+    background-color:  rgb(58, 58, 58);
+    .drop__channels{
+        
+        margin-top: 2px;
+        li{
+            padding: 0  10px;
+            list-style: none;
+            height: 25px ;
+        }
+        li:hover{
+            box-shadow : 0px 0px 5px rgba(255, 255, 255, 0.8);
+            border-top: 1px solid rgba(255, 255, 255, 0.5);;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);;
+            background-color: $color-green;
+            color: black;
+        }
+    }
+    
+}
+
+.channel__dropMenu.toggle__dropChannel .channel__dropContent{
+    display: block;
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    z-index: 1;
+    width:140px;
+    height: 180px;
+    overflow-y: auto;
+    
+    border: 1px solid white;
+    background-color: $color-dark-gray;
+    box-shadow : 0px  1px  5px rgba(255, 255, 255, 0.8);
+    
+}
+
+.channel__dropMenu.toggle__dropChannel .channel__dropBtn  i{ 
+    
+    transform: rotate(-180deg);
+    color: $color-aqua;
+    
+}  
+
+// NOTE/CC DROPDOWN
+  
+.note__dropMenu{
+    width:140px;
+    position: relative;
+    
+    .note__dropBtn{
+        display: flex;
+        padding: 0 10px;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(58, 58, 58);
+        border: 1px solid rgb(58, 58, 58);
+        border-radius: 5px;
+        color: rgb(255, 255, 255);
+        i{
+            font-weight: 100;
+            font-size: 20px;
+            transition:transform  0.3s linear;
+        }
+    }
+    
+}
+
+.note__dropLabel{
+    margin: 0px  5px;
+}
+.note__dropContent::-webkit-scrollbar{
+    width: 7px;
+}
+.note__dropContent::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 25px;
+}
+.note__dropContent::-webkit-scrollbar-thumb {
+    background: $color-aqua;
+    border-radius: 25px;
+}
+.note__dropContent {
+    display: none;
+    background-color:  rgb(58, 58, 58);
+    .drop__note{
+        
+        margin-top: 2px;
+        li{
+            padding: 0  10px;
+            list-style: none;
+            height: 25px ;
+        }
+        li:hover{
+            box-shadow : 0px 0px 5px rgba(255, 255, 255, 0.8);
+            border-top: 1px solid rgba(255, 255, 255, 0.5);;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);;
+            background-color: $color-green;
+            color: black;
+        }
+    }
+    
+}
+
+.note__dropMenu.toggle__dropNote .note__dropContent{
+    display: block;
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    z-index: 1;
+    width:140px;
+    height: 180px;
+    overflow-y: auto;
+    
+    border: 1px solid white;
+    background-color: $color-dark-gray;
+    box-shadow : 0px  1px  5px rgba(255, 255, 255, 0.8);
+    
+}
+
+.note__dropMenu.toggle__dropNote .note__dropBtn  i{ 
+    
+    transform: rotate(-180deg);
+    color: $color-aqua;
+    
+}  
+
+.status__label{
+    color:$color-aqua;
+}
