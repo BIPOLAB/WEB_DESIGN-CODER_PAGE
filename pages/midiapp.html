@@ -4,8 +4,11 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Muted Editor APP</title>
-
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="En Muted Instruments. Construccion de instrumentos y dispositivos Midi custom">
+        <meta name="keyboards" content="MIDI, electronica, instrumentos, tutoriales, arduino,raspberry">
+        <meta name="author" content="Muted Instruments">
   <!-- IMPORT WEBMIDI JS -->
   <script src="https://cdn.jsdelivr.net/npm/webmidi@next/dist/iife/webmidi.iife.js"></script>
 
@@ -26,15 +29,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Audiowide&family=Aldrich&&family=Epilogue:wght@500&family=Source+Code+Pro:wght@400&family=VT323&display=swap"
+    rel="stylesheet">
   <!--FONTAWESOME-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" />
 
-  <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
-     <link rel="stylesheet"
-     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css">
+  
   <!-- IMPORT BOOTSTRAP STYLESHEET -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -219,49 +223,88 @@
     <!-- <div class="left__column">
 
     </div> -->
-    <div class="app__container">
-      <div class="app__header">
-        <h4>CONTROLLER</h4>
-        <h4>|</h4>
-        <h4>GLOBAL CONFIG</h4>
-      </div>
+    
+      
       <div class="app__controller">
-        <div class="pads__container">
-          <div class="controller__pads">
-            <div class="pads" id="pad_01">
-
-            </div>
-            <div class="pads" id="pad_02">
-
-            </div>
-            <div class="pads" id="pad_03">
-
-            </div>
-            <div class="pads" id="pad_04">
-
-            </div>
-            <div class="pads" id="pad_05">
-
-            </div>
-            <div class="pads" id="pad_06">
-
-            </div>
-            <div class="pads" id="pad_07">
-
-            </div>
-            <div class="pads" id="pad_08">
-
-            </div>
-          </div>
+        <!-- <img src="/images/appui/backgrounds/brushed_dark_alum.jpg" alt=""> -->
+        <div class="app__header">
+          <h3>CONTROLLER</h4>
+          <h3>|</h3>
+          <h3>GLOBAL CONFIG</h3>
         </div>
-        <div class="display__container">
-          Chanel 01
-        </div>
+        
+        <!-- FADER 1 -->
+        <channel-strip color="#0f0" label="Channel 1" mute=""></channel-strip><channel-strip color="#0ff" label="Channel 2" solo=""></channel-strip><channel-strip color="#ff0" label="Channel 3"></channel-strip>
+  
+</template><template id="channel-strip-template">
+  <div class="channelstrip">
+    <div class="label" v-bind:style="{ color: color }">
+      {{label}}
+    </div>
+    <div class="horizontal-meter">
+      <div class="activity" v-el:meter=""></div>
+    </div>
+    <button v-bind:class="{&#39;active&#39;: mute === true}" v-on:click="toggleMute">Mute</button><button class="solo" v-bind:class="{&#39;active&#39;: solo === true}" v-on:click="toggleSolo">Solo</button><fader></fader>
+  </div>
+</template><template id="fader-template">
+  <div class="fader">
+    <div class="fader-track" v-el:track="">
+      <div class="fader-thumb" v-bind:style="{ top: faderTop + &#39;px&#39; }" v-el:handle="" v-on:mousedown="onMouseDown" v-touch-options:pan="{ direction: &#39;vertical&#39;, threshold: 1 }" v-touch:pan="onPan"></div>
+    </div>
+    <div class="scale">
+      <div class="scale-tick" track-by="$index" v-bind:style="{ bottom: p + &#39;%&#39; }" v-for="p in scalePositions"></div>
+    </div>
+  </div>
+</template>
+
+<!-- END CHANNEL STRIP -->
+        
+<div class="pads__container">
+  <div class="pads">
+    PAD 1
+  </div>
+  <div class="pads">
+    PAD 1
+  </div>
+  <div class="pads">
+    PAD 1
+  </div>
+  <div class="pads">
+    PAD 1
+  </div>
+  <div class="pads">
+    PAD 1
+  </div>
+  <div class="pads">
+    PAD 1
+  </div>
+  <div class="pads">
+    PAD 1
+  </div>
+  <div class="pads">
+    PAD 1
+  </div>
+</div>
+        
         <div class="mmc__container">
-          <div class="mmc__scroll">
-            <img src="../images/appui/metal-knob_01-01.png" alt="" width="100px">
+          <div class="screen-container">
+            <div class="screen-display">
+              <p>From Ableton</p>
+              <p>Note</p>
+              <p>Velocity</p>
+            </div>
           </div>
           <div class="controller__mmc">
+            <div class="mmc__menu__button">
+              <i class="fas fa-bars"> </i>
+            </div>
+
+            <div class="mmc__button">
+              <i class="fa fa-play"> </i>
+            </div>
+             <div class="mmc__button">
+              <i class="fa fa-play"> </i>
+            </div>
 
             <div class="mmc__button">
               <i class="fa fa-play"> </i>
@@ -287,12 +330,16 @@
             <div class="mmc__button">
               <i class="fa fa-arrow-right"> </i>
             </div>
+            <div class="mmc__mode__button"></div>
+            <div class="mmc__mode__button"></div>
+            <div class="mmc__mode__button"></div>
+            <div class="mmc__mode__button"></div>
           </div>
         </div>
 
       </div>
-      
-    </div>
+
+    
     <!-- <div class="app__header">
         <h4>CONTROLLER</h4>
         <h4>|</h4>
@@ -325,6 +372,7 @@
       </div> 
     </div>-->
   </main>
+</div>
   <div class="app__footer">
     <!-- <h3> APP FOOTER</h3> -->
     <label class="drop__label">Mode Selector</label>
@@ -406,26 +454,26 @@
     </div>
     <!-- END DROP MENU -->
     <div class="status__gridContainer">
-    <div class="status__grid">
-    <label class="status__item">STATUS</label>
-    <div class="status__item">
-      <i class="fab fa-usb" id="usb__icon"></i>
+      <div class="status__grid">
+        <label class="status__item">STATUS</label>
+        <div class="status__item">
+          <i class="fab fa-usb" id="usb__icon"></i>
+        </div>
+        <label class="status__item">SYNC</label>
+        <div class="status__item">
+          <i class="fa-solid fa-rocket"></i>
+        </div>
+      </div>
     </div>
-    <label class="status__item">SYNC</label>
-    <div class="status__item">
-      <i class="fa-solid fa-rocket"></i>
-    </div>
-  </div>
-</div>
   </div>
 
 
   <!-- <footer>
     <ul class="socials">
-      <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-      <li><a href="#"><i class="fab fa-twitch"></i></a></li>
-      <li><a href="#"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.instagram.com/mutedinstruments/"  target="_blank"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCLbN6IbmCZCFfm8bYlDZZzQ" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="https://www.twitch.tv/muted_instruments" target="_blank"><i class="fa fa-twitch"></i></a></li>
+                <li><a href="https://github.com/bipolab" target="_blank"><i class="fa fa-github"></i></a></li>  
     </ul>
     <p>© 2021 Muted Instruments | Address: Florida, Buenos Aires, Argentina</p>
 
@@ -439,7 +487,7 @@
     crossorigin="anonymous"></script>
   <!-- END BOOTSTRAP SCRIPT -->
 
-  <script src="../static/js/midiapp.js"></script>
+  <!-- <script src="../static/js/midiapp.js"></script> -->
   <script src="../static/js/app_ui_actions.js"></script>
 
 

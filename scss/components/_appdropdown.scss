@@ -16,6 +16,7 @@
             font-weight: 100;
             font-size: 20px;
             transition:transform  0.3s linear;
+            color:$color-aqua;
         }
     }
     
@@ -232,6 +233,4 @@
     
 }  
 
-.status__label{
-    color:$color-aqua;
-}
+.status__label{}

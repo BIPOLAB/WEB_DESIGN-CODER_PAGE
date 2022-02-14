@@ -1,0 +1,207 @@
+@mixin pads_define ($bgColor,$width,$height,$borderRadius){
+    background-color: $bgColor;
+    width: $width;
+    height: $height;
+    border-radius: $borderRadius;
+}
+
+@mixin pads_grid_define ($tempColumns,$tempRows, $gap){
+    grid-template-columns: $tempColumns;
+    grid-template-rows: $tempRows;
+    gap: $gap;
+}
+
+
+.faders__grid{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat (2,90px);
+}
+.pads__container{
+    @include pads_grid_define(repeat(8,60px),repeat(2,60px),10px);
+    display: grid;
+    position: absolute;
+    bottom:220px;
+    left:100px;
+    width: 60px;
+    height: 60px;
+    padding-top: 5px ;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.pads{
+    @include pads_define($color-white,60px,60px,10px);
+    cursor: pointer;
+    box-shadow: -1px -1px 1px rgba(0, 0, 0,1),
+                 2px  2px 6px rgba(0,0,0,0.8),
+                 -1px  -1px 3px rgba(0,0,0,0.8);
+                 
+    &:hover{
+    box-shadow: -1px -1px 1px rgba(0, 0, 0,1),
+                 2px  2px 6px rgba(0,0,0,0.8),
+                 inset -2px -2px 5px rgba(85, 85, 85, 1),
+                 inset 2px  2px 5px rgba(85, 85, 85, 0.8);
+    }
+        
+} 
+
+.back-green { background-color: green; }
+.back-red { background-color: red; }
+
+.mmc__container{
+    display: flex;
+    position: absolute;
+    left:auto;
+    top: 140px;
+    right: 100px;
+    justify-content: center;
+    align-items: center;
+    width: 225px;
+    height: 400px;
+    // background-color: #000000;
+    // background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
+    border : 5px;
+}
+
+.controller__mmc{
+    display: grid;
+    grid-template-columns: repeat(4,30px);
+    grid-gap: 10px;
+    grid-template-rows: 15px 15px 15px 30px ;
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+}
+
+.mmc__button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    width: 30px;
+    height: 15px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5%;
+    cursor: pointer;
+    &:hover{
+        color: $color-aqua;
+        box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1),
+                 2px  2px 6px rgba(0,0,0,0.8),
+                 inset -2px -2px 5px rgba(0, 225, 255, 0.5),
+                 inset 2px  2px 5px rgba(0,0,0,0.5);
+    }
+}
+
+.mmc__menu__button{
+    display: flex;
+    flex-direction: row;
+    grid-column: 1 / 3;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    width: auto;
+    height: 15px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5%;
+    cursor: pointer;
+    &:hover{
+        color: $color-aqua;
+        box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1),
+                 2px  2px 6px rgba(0,0,0,0.8),
+                 inset -2px -2px 5px rgba(0, 225, 255, 0.5),
+                 inset 2px  2px 5px rgba(0,0,0,0.5);
+    }
+}
+
+.mmc__mode__button{
+    display: flex;
+    grid-row: 4 / 5;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    font-size: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5%;
+    cursor: pointer;
+    &:hover{
+        color: $color-aqua;
+        box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1),
+                 2px  2px 6px rgba(0,0,0,0.8),
+                 inset -2px -2px 5px rgba(0, 225, 255, 0.5),
+                 inset 2px  2px 5px rgba(0,0,0,0.5);
+    }
+}
+
+.mmc__pageLeft__button{
+    display: flex;
+    flex-direction: row;
+    grid-column: 1 / 4;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    width: auto;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5%;
+    cursor: pointer;
+    &:hover{
+        color: $color-aqua;
+        box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1),
+                 2px  2px 6px rgba(0,0,0,0.8),
+                 inset -2px -2px 5px rgba(0, 225, 255, 0.5),
+                 inset 2px  2px 5px rgba(0,0,0,0.5);
+    }
+}
+.mmc__pageRight__button{
+    display: flex;
+    flex-direction: row;
+    grid-column: 4 / 7;
+    grid-row: 2 / 3;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    width: auto;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5%;
+    cursor: pointer;
+    &:hover{
+        color: $color-aqua;
+        box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1),
+                 2px  2px 6px rgba(0,0,0,0.8),
+                 inset -2px -2px 5px rgba(0, 225, 255, 0.5),
+                 inset 2px  2px 5px rgba(0,0,0,0.5);
+    }
+}
+.mmc__scroll{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    
+    //padding-left: 20px;
+    // padding-top: 10px;
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    width: 70px;
+    height: 70px;
+    margin-right: 15px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    cursor: pointer;
+    &:hover{box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1),
+                 2px  2px 6px rgba(0,0,0,0.8),
+                 inset -2px -2px 10px rgba(0, 225, 255, 0.5),
+                 inset 2px  2px 10px rgba(0,0,0,0.5);
+    }
+    img{
+        width: 70px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+}
+

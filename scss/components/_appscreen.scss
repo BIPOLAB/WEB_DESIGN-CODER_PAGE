@@ -1,0 +1,68 @@
+.screen-container {
+    display: block;
+    position: absolute;
+    width: 128px;
+    height: 92px;
+    border-radius: 2px;
+    background-color: black;
+    background-image: linear-gradient(#272028, #231D1F, #201921, #231E1B, #231C24);
+    right: 70px;
+    top: 10px;
+    box-shadow: 0px -1px 0.5px #B6ADA4,
+        0 1px 0.5px #AAA09F,
+        -1px 0 0.5px #B2A9AA,
+        1px 0 0.5px #BFB1B0,
+        3px 0 2px rgba(231, 219, 218, 0.5),
+        0 0 2.5px 3px rgba(234, 228, 223, 0.25),
+        0 0 2.5px 1px #130C09 inset;
+}
+
+.screen-display {
+    display: block;
+    width: 128px;
+    height: 90px;
+    background-color: red;
+    position: absolute;
+    top: 1px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2px;
+    background-image: linear-gradient(90deg, transparent 15%, rgba(134, 135, 129, 0.05), transparent 85%),
+        radial-gradient(rgba(92, 93, 87, 0.75), transparent 70%),
+        linear-gradient(#65675C, #727469, #6E746A);
+    background-size: 10px 100%, 200px 200px, 100% 100%;
+    background-position: 0 0, center center, 0 0;
+    background-repeat: repeat, no-repeat, no-repeat;
+    box-shadow: 0 0 2px 0 #2B262C,
+        0 0 1px 1px #221B23 inset,
+        0 0 3px #221B23 inset,
+        0 0 3px 0.5px #383838 inset,
+        0 0 5px #484848 inset,
+        9px 0 7px -4px #605A5C inset,
+        0 -2px 1px #7A7772 inset;
+}
+
+.screen-display {
+    padding: 2px 12px;
+}
+
+.screen-display p {
+    font-family: "Source Code Pro", monospace,
+    monospace;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 10px;
+    color: #272822;
+    padding-top: 2px;
+    line-height: 3px;
+    text-shadow: 0 0 0.5px #272822,
+        0.2px 0.2px 0.5px #4A4B45,
+        -0.2px 0.2px 0.5px #51524C,
+        0.2px -0.2px 0.5px #4A4B45,
+        0 0 0.75px #51524C,
+        0 0 1.25px #5F5F5F;
+
+}
+
