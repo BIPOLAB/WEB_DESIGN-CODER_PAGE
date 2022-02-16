@@ -10,11 +10,13 @@
 @import "../scss/components/mediaquery";
 @import "../scss/components/midiapp";
 @import "../scss/components/appbuttons";
-
+@import "../scss/components/indexcards";
 @import "../scss/components/appicons";
 @import "../scss/components/appscreen";
 @import "../scss/components/appfaders";
 @import "../scss/components/appdropdown";
+
+@import "../scss/globals/base";
 body{
     background-color: black;
 }

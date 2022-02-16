@@ -780,13 +780,13 @@ footer {
 
 .navigation__container {
   grid-template-columns: repeat(3, 20px);
-  grid-template-rows: repeat(3, 20px);
+  grid-template-rows: repeat(2, 20px);
   gap: 10px;
   display: grid;
   position: absolute;
-  bottom: 180px;
-  left: 215px;
-  width: 60px;
+  bottom: 80px;
+  right: 50px;
+  width: 100px;
   height: 35px;
   padding-top: 5px;
   margin-left: 5px;
@@ -1009,6 +1009,18 @@ footer {
     align-items: center;
     align-content: center; }
 
+.generic__card {
+  width: 400px;
+  height: 530px;
+  text-align: center;
+  flex-direction: column; }
+  .generic__card > img {
+    width: 400px;
+    height: 300px; }
+  .generic__card > button {
+    width: 100px;
+    background-color: #333333; }
+
 #usb__icon {
   transform: rotate(-90deg); }
 
@@ -1120,11 +1132,14 @@ footer {
     background: rgba(255, 255, 255, 0.75); }
 
 .pan_encoder {
+  position: absolute;
   width: 60px;
   height: 60px;
+  right: 140px;
+  bottom: 10px;
   border-radius: 50%;
-  background-color: gray;
-  box-shadow: -1px -1px 2px #00ffdd, 1px 1px 2px #00ffdd, -1px -1px 42px #00ffdd; }
+  background-color: transparent;
+  box-shadow: -1px -1px 2px #00ffdd, 1px 1px 2px #00ffdd, -1px -1px 4px #00ffdd; }
 
 .drop__menu {
   width: 140px;
@@ -1305,6 +1320,47 @@ footer {
 .note__dropMenu.toggle__dropNote .note__dropBtn i {
   transform: rotate(-180deg);
   color: #00ffbf; }
+
+/******GENERIC CARDS*****/
+.card, .generic__card {
+  border-radius: 8px;
+  background-color: #ebebeb;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 20px;
+  margin-top: 0px;
+  transition: all 0.65s; }
+  .card:hover, .generic__card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.1); }
+
+.img, .generic__card > img {
+  width: 400px;
+  height: 300px;
+  object-fit: fill; }
+
+.title, .generic__card > h3 {
+  font-weight: 600; }
+
+.p, .generic__card > p {
+  color: #0c0c0c;
+  /*display: none;*/
+  padding: 0 1rem;
+  font-size: 16px;
+  font-weight: 300; }
+
+.button, .generic__card > button {
+  margin-top: 20px;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  color: #ebebeb; }
+  .button:hover, .generic__card > button:hover {
+    background-color: #00ffbf;
+    color: #333333; }
 
 body {
   background-color: black; }

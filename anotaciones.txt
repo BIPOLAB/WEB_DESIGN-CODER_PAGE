@@ -2,7 +2,21 @@ Se realizo SEO con la pagina https://seigoo.com/ y se obtuvo un 55%
 de los resultados obtenidos se  deben corregir  
 Meta Descriptions
 Keywords
+
+///////////////////////////////////////////////////////////////////
+
 Se genero un archivo sitemap.xml y se dejo en la ruta raiz. 
+
+///////////////////////////////////////////////////////////////////
+
+Se   genero un Extend para las CARDS utilizadas en el inicio pero 
+que puede ser reutilizado para cualquiera de las paginas. 
+extend
+scss\globals\_base.scss
+se aplico en 
+scss\components\_indexcards.scss
+
+///////////////////////////////////////////////////////////////////
 
 Se agrego mixing con parametros en scss\components\_appfaders.scss
 @mixin mixer_grid_define ($tempColumns,$tempRows, $gap){
@@ -40,7 +54,6 @@ y se utilizaro dentro de
 .column{
     @include colum_define(200px, 600px,10px, 10px ,10px,10px,$color-aqua);
     display: flex;
-    
     border-right: 1px solid white;
     padding-top: 10px;
     //background-image: linear-gradient(0deg, rgb(0, 0, 0),transparent);
@@ -163,6 +176,7 @@ y se utilizaro dentro de
     padding-bottom: 5px;
 }
 
+Dentro de este se ve uno de los Nesting sobre el hover. Se utilizo en muchos otras partes del codigo.
 .mmc__button{
     @include pads_define($color-white,30px,15px,2px);
     display: flex;

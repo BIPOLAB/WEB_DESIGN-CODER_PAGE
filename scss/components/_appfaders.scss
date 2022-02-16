@@ -100,12 +100,15 @@
       }
 
       .pan_encoder{
+          position: absolute;
           width:60px;
           height: 60px;
+          right:140px;
+          bottom : 10px;
          border-radius: 50%;
-         background-color: gray;
+         background-color: transparent;
          box-shadow: -1px -1px 2px rgb(0, 255, 221),
          1px  1px 2px rgb(0, 255, 221),
-         -1px  -1px 42px rgb(0, 255, 221);
+         -1px  -1px 4px rgb(0, 255, 221);
       }
     

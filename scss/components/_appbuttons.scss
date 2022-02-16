@@ -10,12 +10,12 @@
     border-radius: $borderRadius;
 }
 .navigation__container{
-    @include pads_grid_define(repeat(3,20px),repeat(3,20px),10px);
+    @include pads_grid_define(repeat(3,20px),repeat(2,20px),10px);
     display: grid;
     position: absolute;
-    bottom:180px;
-    left:215px;
-    width: 60px;
+    bottom:80px;
+    right:50px;
+    width: 100px;
     height: 35px;
     padding-top: 5px ;
     margin-left: 5px;
