@@ -1,0 +1,180 @@
+Se realizo SEO con la pagina https://seigoo.com/ y se obtuvo un 55%
+de los resultados obtenidos se  deben corregir  
+Meta Descriptions
+Keywords
+Se genero un archivo sitemap.xml y se dejo en la ruta raiz. 
+
+Se agrego mixing con parametros en scss\components\_appfaders.scss
+@mixin mixer_grid_define ($tempColumns,$tempRows, $gap){
+    grid-template-columns: $tempColumns;
+    grid-template-rows: $tempRows;
+    gap: $gap;
+}
+
+y se utilizaro dentro de 
+.mixer{
+    @include mixer_grid_define(repeat(16,60px),25rem,10px);
+    display: grid;
+    position: absolute;
+    left:220px;
+    bottom:180px; 
+    min-height: 25rem;
+    margin-bottom: 10px;
+}
+///////////////////////////////////////////////////////////////////
+
+Se agrego mixing con parametros en scss\components\_midiapp.scss
+@mixin colum_define($width, $height,
+                    $marginTop,$marginBottom,
+                    $marginLeft,$marginRight,$bgColor ){
+    width:$width;
+    height:$height;
+    margin-top: $marginTop;
+    margin-bottom:$marginBottom;
+    margin-left: $marginLeft;
+    margin-right: $marginRight;
+    //background-color: $bgColor;
+    
+}
+y se utilizaro dentro de 
+.column{
+    @include colum_define(200px, 600px,10px, 10px ,10px,10px,$color-aqua);
+    display: flex;
+    
+    border-right: 1px solid white;
+    padding-top: 10px;
+    //background-image: linear-gradient(0deg, rgb(0, 0, 0),transparent);
+    hr{margin-top: 50px;}
+}
+
+.column__right{
+    @include colum_define(400px, 500px,10px, 10px ,10px,10px,$color-aqua);
+    display: flex;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding-top: 10px;
+    hr{margin-top: 50px;}
+}
+
+///////////////////////////////////////////////////////////////////
+Se agregaron dos mixing con parametros en scss\components\_appbuttons.scss
+
+@mixin pads_grid_define ($tempColumns,$tempRows, $gap){
+    grid-template-columns: $tempColumns;
+    grid-template-rows: $tempRows;
+    gap: $gap;
+}
+
+@mixin pads_define ($bgColor,$width,$height,$borderRadius){
+    background-color: $bgColor;
+    width: $width;
+    height: $height;
+    border-radius: $borderRadius;
+}
+
+y se utilizaro dentro de 
+.navigation__container{
+    @include pads_grid_define(repeat(3,20px),repeat(3,20px),10px);
+    display: grid;
+    position: absolute;
+    bottom:180px;
+    left:215px;
+    width: 60px;
+    height: 35px;
+    padding-top: 5px ;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.pads__container{
+    @include pads_grid_define(repeat(16,60px),repeat(1,60px),10px);
+    display: grid;
+    position: absolute;
+    bottom:120px;
+    left:215px;
+    width: 60px;
+    height: 35px;
+    padding-top: 5px ;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.pads{
+    @include pads_define(white,50px,50px,3px);
+    cursor: pointer;
+    user-select: none;
+    box-shadow: -1px -1px 1px rgba(0, 0, 0,1),
+                 2px  2px 6px rgba(0,0,0,0.8),
+                 -1px  -1px 3px rgba(0,0,0,0.8);
+}
+
+.navigation__upBtn{
+    @include pads_define(white,20px,20px,3px);
+    cursor: pointer;
+    user-select: none;
+    grid-column: 2 / 3;
+    box-shadow: -1px -1px 1px rgba(0, 0, 0,1),
+                 2px  2px 6px rgba(0,0,0,0.8),
+                 -1px  -1px 3px rgba(0,0,0,0.8);
+}
+
+.navigation__leftBtn{
+    @include pads_define(white,20px,20px,3px);
+    cursor: pointer;
+    user-select: none;
+    grid-column: 1 / 2;
+    box-shadow: -1px -1px 1px rgba(0, 0, 0,1),
+                 2px  2px 6px rgba(0,0,0,0.8),
+                 -1px  -1px 3px rgba(0,0,0,0.8);
+}
+
+.navigation__centerBtn{
+    @include pads_define(white,20px,20px,10px);
+    cursor: pointer;
+    user-select: none;
+    grid-column: 2 / 3;
+    box-shadow: -1px -1px 1px rgba(0, 0, 0,1),
+                 2px  2px 6px rgba(0,0,0,0.8),
+                 -1px  -1px 3px rgba(0,0,0,0.8);
+}
+.navigation__rightBtn{
+    @include pads_define(white,20px,20px,3px);
+    cursor: pointer;
+    user-select: none;
+    grid-column: 3 / 4;
+    box-shadow: -1px -1px 1px rgba(0, 0, 0,1),
+                 1px  1px 1px rgba(0,0,0,0.5);
+}
+
+.navigation__downBtn{
+    @include pads_define(white,20px,20px,3px);
+    cursor: pointer;
+    user-select: none;
+    grid-column: 2 / 3;
+    box-shadow: -1px -1px 1px rgba(0, 0, 0,1),
+                 2px  2px 6px rgba(0,0,0,0.8),
+                 -1px  -1px 3px rgba(0,0,0,0.8);
+}
+
+.controller__mmc{
+    @include pads_grid_define(repeat(4,30px),15px 15px 15px 30px,10px);
+    display: grid;
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+}
+
+.mmc__button{
+    @include pads_define($color-white,30px,15px,2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    cursor: pointer;
+    &:hover{
+        color: $color-aqua;
+        box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1),
+                 2px  2px 6px rgba(0,0,0,0.8),
+                 inset -2px -2px 5px rgba(0, 225, 255, 0.5),
+                 inset 2px  2px 5px rgba(0,0,0,0.5);
+    }
+}

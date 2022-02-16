@@ -1,41 +1,52 @@
+@mixin pads_grid_define ($tempColumns,$tempRows, $gap){
+    grid-template-columns: $tempColumns;
+    grid-template-rows: $tempRows;
+    gap: $gap;
+}
 @mixin pads_define ($bgColor,$width,$height,$borderRadius){
     background-color: $bgColor;
     width: $width;
     height: $height;
     border-radius: $borderRadius;
 }
-
-@mixin pads_grid_define ($tempColumns,$tempRows, $gap){
-    grid-template-columns: $tempColumns;
-    grid-template-rows: $tempRows;
-    gap: $gap;
-}
-
-
-.faders__grid{
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat (2,90px);
-}
-.pads__container{
-    @include pads_grid_define(repeat(8,60px),repeat(2,60px),10px);
+.navigation__container{
+    @include pads_grid_define(repeat(3,20px),repeat(3,20px),10px);
     display: grid;
     position: absolute;
-    bottom:220px;
-    left:100px;
+    bottom:180px;
+    left:215px;
     width: 60px;
-    height: 60px;
+    height: 35px;
+    padding-top: 5px ;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.pads__container{
+    @include pads_grid_define(repeat(16,60px),repeat(1,60px),10px);
+    display: grid;
+    position: absolute;
+    bottom:120px;
+    left:215px;
+    width: 60px;
+    height: 35px;
     padding-top: 5px ;
     margin-left: 5px;
     margin-right: 5px;
 }
 
 .pads{
-    @include pads_define($color-white,60px,60px,10px);
+    @include pads_define(white,50px,50px,3px);
     cursor: pointer;
+    user-select: none;
     box-shadow: -1px -1px 1px rgba(0, 0, 0,1),
                  2px  2px 6px rgba(0,0,0,0.8),
                  -1px  -1px 3px rgba(0,0,0,0.8);
+
+                
+//background: -webkit-radial-gradient(center, #900BAD, #4E648F);
+//background: -moz-radial-gradient(center, #900BAD, #4E648F);
+background: radial-gradient(ellipse at center,rgb(255, 255, 255), #bcff03 );
                  
     &:hover{
     box-shadow: -1px -1px 1px rgba(0, 0, 0,1),
@@ -45,7 +56,116 @@
     }
         
 } 
+.navigation__upBtn{
+    @include pads_define(white,20px,20px,3px);
+    cursor: pointer;
+    user-select: none;
+    grid-column: 2 / 3;
+    box-shadow: -1px -1px 1px rgba(0, 0, 0,1),
+                 2px  2px 6px rgba(0,0,0,0.8),
+                 -1px  -1px 3px rgba(0,0,0,0.8);
 
+                
+//background: -webkit-radial-gradient(center, #900BAD, #4E648F);
+//background: -moz-radial-gradient(center, #900BAD, #4E648F);
+background: radial-gradient(ellipse at center,rgb(255, 255, 255), white  );
+                 
+    &:hover{
+    box-shadow: -1px -1px 1px rgba(0, 0, 0,1),
+                 2px  2px 6px rgba(0,0,0,0.8),
+                 inset -2px -2px 5px rgba(85, 85, 85, 1),
+                 inset 2px  2px 5px rgba(85, 85, 85, 0.8);
+    }
+        
+}  
+.navigation__leftBtn{
+    @include pads_define(white,20px,20px,3px);
+    cursor: pointer;
+    user-select: none;
+    grid-column: 1 / 2;
+    box-shadow: -1px -1px 1px rgba(0, 0, 0,1),
+                 2px  2px 6px rgba(0,0,0,0.8),
+                 -1px  -1px 3px rgba(0,0,0,0.8);
+
+                
+//background: -webkit-radial-gradient(center, #900BAD, #4E648F);
+//background: -moz-radial-gradient(center, #900BAD, #4E648F);
+background: radial-gradient(ellipse at center,rgb(255, 255, 255), white  );
+                 
+    &:hover{
+    box-shadow: -1px -1px 1px rgba(0, 0, 0,1),
+                 2px  2px 6px rgba(0,0,0,0.8),
+                 inset -2px -2px 5px rgba(85, 85, 85, 1),
+                 inset 2px  2px 5px rgba(85, 85, 85, 0.8);
+    }
+        
+} 
+.navigation__centerBtn{
+    @include pads_define(white,20px,20px,10px);
+    cursor: pointer;
+    user-select: none;
+    grid-column: 2 / 3;
+    box-shadow: -1px -1px 1px rgba(0, 0, 0,1),
+                 2px  2px 6px rgba(0,0,0,0.8),
+                 -1px  -1px 3px rgba(0,0,0,0.8);
+
+                
+//background: -webkit-radial-gradient(center, #900BAD, #4E648F);
+//background: -moz-radial-gradient(center, #900BAD, #4E648F);
+background: radial-gradient(ellipse at center,rgb(255, 255, 255), white  );
+                 
+    &:hover{
+    box-shadow: -1px -1px 1px rgba(0, 0, 0,1),
+                 2px  2px 6px rgba(0,0,0,0.8),
+                 inset -2px -2px 5px rgba(85, 85, 85, 1),
+                 inset 2px  2px 5px rgba(85, 85, 85, 0.8);
+    }
+        
+} 
+.navigation__rightBtn{
+    @include pads_define(white,20px,20px,3px);
+    cursor: pointer;
+    user-select: none;
+    grid-column: 3 / 4;
+    box-shadow: -1px -1px 1px rgba(0, 0, 0,1),
+                 1px  1px 1px rgba(0,0,0,0.5);
+                 
+
+                
+//background: -webkit-radial-gradient(center, #900BAD, #4E648F);
+//background: -moz-radial-gradient(center, #900BAD, #4E648F);
+background: radial-gradient(ellipse at center,rgb(255, 255, 255), white );
+                 
+    &:hover{
+    box-shadow: -1px -1px 1px rgb(94, 94, 94),
+                 1px  1px 1px rgba(0,0,0,0.8),
+                 inset -2px -2px 1px rgba(85, 85, 85, 0.2),
+                 inset 2px  2px 1px rgba(85, 85, 85, 0.5);
+    }
+        
+} 
+.navigation__downBtn{
+    @include pads_define(white,20px,20px,3px);
+    cursor: pointer;
+    user-select: none;
+    grid-column: 2 / 3;
+    box-shadow: -1px -1px 1px rgba(0, 0, 0,1),
+                 2px  2px 6px rgba(0,0,0,0.8),
+                 -1px  -1px 3px rgba(0,0,0,0.8);
+
+                
+//background: -webkit-radial-gradient(center, #900BAD, #4E648F);
+//background: -moz-radial-gradient(center, #900BAD, #4E648F);
+background: radial-gradient(ellipse at center,rgb(255, 255, 255), white  );
+                 
+    &:hover{
+    box-shadow: -1px -1px 1px rgba(0, 0, 0,1),
+                 2px  2px 6px rgba(0,0,0,0.8),
+                 inset -2px -2px 5px rgba(85, 85, 85, 1),
+                 inset 2px  2px 5px rgba(85, 85, 85, 0.8);
+    }
+        
+} 
 .back-green { background-color: green; }
 .back-red { background-color: red; }
 
@@ -65,23 +185,18 @@
 }
 
 .controller__mmc{
+    @include pads_grid_define(repeat(4,30px),15px 15px 15px 30px,10px);
     display: grid;
-    grid-template-columns: repeat(4,30px);
-    grid-gap: 10px;
-    grid-template-rows: 15px 15px 15px 30px ;
     border-bottom: 2px solid white;
     padding-bottom: 5px;
 }
 
 .mmc__button{
+    @include pads_define($color-white,30px,15px,2px);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 10px;
-    width: 30px;
-    height: 15px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 5%;
     cursor: pointer;
     &:hover{
         color: $color-aqua;

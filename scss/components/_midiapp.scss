@@ -1,17 +1,22 @@
-.global__main__app{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    height: auto;
-    width: 100%;
-    background-color: #7f5a83;
-    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
-    
-    padding: 0px 10px;
+@mixin colum_define($width, $height,
+                    $marginTop,$marginBottom,
+                    $marginLeft,$marginRight,$bgColor ){
+    width:$width;
+    height:$height;
+    margin-top: $marginTop;
+    margin-bottom:$marginBottom;
+    margin-left: $marginLeft;
+    margin-right: $marginRight;
+    //background-color: $bgColor;
     
 }
-
+.global__main__app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-old-white;
+    padding: 0px 10px;
+}
 
 .app__header{
     display: flex;
@@ -29,28 +34,17 @@
         margin-left: 10px;}
 } 
 
-.left__column{
-    display: flex;
-    height: 600px;
-    width: 150px;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: white;
-    border: 1px solid white;
-    border-radius: 5px;
-    padding-top: 10px;
-    hr{margin-top: 50px;}
-}
 .app__controller{
     display: flex;
     justify-content: center;
     align-content: center;
     width: 1300px;
-    height: 500px;
+    height: auto;
     margin: 5px  5px;
     border-radius: 5px;
     // background-color: $color-old-white;
-    // background-image: url("/images/appui/backgrounds/brushed_dark_alum.jpg");
+    background-image: url("/images/appui/backgrounds/brushed_dark_alum.jpg") ;
+    
     background-size: 100% 100%, 100% 100%;
     background-position: 0 0, 0 0;
     box-shadow: 0 2px 1px -1px #FFF inset,
@@ -63,7 +57,31 @@
         0px 30px 70px  rgba(0,0,0,0.25);
         
 }
+
+.main_shape_gradient{
+    width: 500px;
+    height: 400px;
+    background-image:  $color-aqua;
+}
+
+.column{
+    @include colum_define(200px, 600px,10px, 10px ,10px,10px,$color-aqua);
+    display: flex;
     
+    border-right: 1px solid white;
+    padding-top: 10px;
+    //background-image: linear-gradient(0deg, rgb(0, 0, 0),transparent);
+    hr{margin-top: 50px;}
+}
+
+.column__right{
+    @include colum_define(400px, 500px,10px, 10px ,10px,10px,$color-aqua);
+    display: flex;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding-top: 10px;
+    hr{margin-top: 50px;}
+}
 
 .app__footer{
     display: flex;
