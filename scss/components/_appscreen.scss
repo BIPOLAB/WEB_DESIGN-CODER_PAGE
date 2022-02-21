@@ -1,8 +1,7 @@
 .screen-container {
-    display: block;
-    position: absolute;
+    grid-column: 1 / 9;
     width: 128px;
-    height: 92px;
+    height: 82px;
     border-radius: 2px;
     background-color: black;
     background-image: linear-gradient(#272028, #231D1F, #201921, #231E1B, #231C24);
@@ -18,12 +17,11 @@
 }
 
 .screen-display {
-    display: block;
+    
     width: 128px;
-    height: 90px;
+    height: 82px;
     background-color: red;
-    position: absolute;
-    top: 1px;
+    
     left: 0;
     right: 0;
     margin-left: auto;
@@ -42,10 +40,6 @@
         0 0 5px #484848 inset,
         9px 0 7px -4px #605A5C inset,
         0 -2px 1px #7A7772 inset;
-}
-
-.screen-display {
-    padding: 2px 12px;
 }
 
 .screen-display p {

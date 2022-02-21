@@ -8,7 +8,7 @@
         <meta name="description" content="En Muted Instruments. Construccion de instrumentos y dispositivos Midi custom">
         <meta name="keyboards" content="MIDI, electronica, instrumentos, tutoriales, arduino,raspberry">
         <meta name="author" content="Muted Instruments">
-        <title>Muted Instruments</title>
+        <title>Muted Instruments Support</title>
         <link rel="stylesheet" href="../static/css/main.css">
         <!--Script Para Efecto en header-->
     
@@ -16,31 +16,28 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Rock+3D" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap" rel="stylesheet">
-    
+         
         <!--FONTAWESOME-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
-            " />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     </head>
     
     <body>
     
         <header>
-            <nav id="menu">
-                <div class="mutedLogo">
-                    <img src="/images/Logo_01-01.png" alt="logo" class="logo" width="150px">
-                    <!-- <span>Muted</span> <a href="/index.html"></a>
-                    <span>Instruments</span> <a href="/index.html"></a> -->
-                </div>
+            <div class="mutedLogo">
+                <a href="../index.html"><img src="/images/Logo_01-01_black.png" alt="logo" class="logo" ></a>
+            </div>
+            <nav id="navMenu">
+                
                 <ul class="menu-items">
                     <li><a href="../index.html">HOME</a></li>
                     <li><a href="./products.html">PRODUCTS</a></li>
@@ -54,15 +51,59 @@
                 </span>
             </nav>
         </header>
-    <main>
+    <main class="support__main__container">
         <section id="supportHero">
-            <h1>SUPPORT</h1>
-            <div class="heroWrapper"></div>
-
+            <h1>muted help center</h1>
+            <div class="heroWrapper">
+                <!-- SEARCH BAR -->
+                <div class="searchBar">
+                    <i class ="fa fa-search" id="searchFocus"></i>
+                    <form action="">
+                        <p>
+                            <input type="text" name="fullName"  placeholder="What are you looking for?">
+                        </p>
+                    </form>
+                        <i class ="fa fa-arrow-right" id="search__arrow"></i>
+                </div>
+            </div>
         </section>
 
 
-    </main>
+    
+    <h2>Product Help</h2>
+    <section class="support__card__container">
+        
+        <div class="generic__support__card">
+            <img src="../images/support/Dollarphotoclub_25492574-760x428.jpg" alt="Muted Instruments FA Q">
+            <h3>FAQ</h3>
+            <h4>Search for Frequently asked question </h4>
+            <button>See all</button>
+        </div>
+
+        <div class="generic__support__card">
+            <img src="../images/support/4045524560_98be572638_w.jpg" alt="Muted Instruments support team">
+            <h3>Contact Us</h3>
+            <h4>Contact with our support team</h4>
+            <button>SEE ALL</button>
+        </div>
+
+        <div class="generic__support__card">
+            <img src="../images/support/Downloads.PNG" alt="Muted Instruments Downloads software and manuals">
+            <h3>Downloads</h3>
+            <h4>Download software and proucts manuals</h4>
+            <button>SEE ALL</button>
+        </div>
+
+        <div class="register_product">
+            
+            <img src="../images/support/register_hero.PNG" alt="pcbController">
+            <h2>Register Products</h2>
+            <h3>Register my product</h3>
+            
+        </div>
+
+    </section>
+</main>
     <div class="footer-content">
         <footer>
             

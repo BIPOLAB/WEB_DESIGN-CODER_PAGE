@@ -11,13 +11,17 @@
     gap: $gap;
 }
 .mixer{
-    @include mixer_grid_define(repeat(16,60px),25rem,10px);
-    display: grid;
-    position: absolute;
-    left:220px;
-    bottom:180px; 
-    min-height: 25rem;
-    margin-bottom: 10px;
+    display: grid; 
+    position: relative;
+    justify-items: center;
+    align-items: center;
+    left: -150px;
+    @include mixer_grid_define(repeat(8,54px),50px 30px 30px 30px 30px,10px);
+    //border: 1px solid white;
+    //padding: 5px;
+    top:120px;
+    padding-bottom: 5px;
+    
 }
 .channelstrip {
     display: flex;
@@ -27,24 +31,22 @@
     user-select: none;
     background: rgba(50,50,50,0.2);
     //box-shadow: 1px 1px 0px 1px rgba(255, 255, 255, 0.3);
-    padding: .25rem;
     border-right: 1px solid white;
-    margin: .25rem;
-    width: 3rem;
+    width: 60px;
+    //height: 150px;
 }
 
 .fader {
     position: relative;
+    grid-column: 2 / 3;
     flex-grow: 1;
-    margin: 3rem 0 3rem 0;
     .fader-track {
       position: absolute;
       z-index: 1;
-      top: 0;
-      bottom: 0;
-      width: .25rem;
-      left: 50%;
-      margin-left: -.125rem;
+      top: 10%;
+      bottom: 0%;
+      width: .75rem;
+      left: 40%;
       background: rgb(0,0,0);
       border: none;
       border-radius: 5px;
@@ -57,16 +59,13 @@
         position: absolute;
         z-index: 1;
         border: none;
-        height: 4rem;
-        width: 2rem;
-        left: 50%;
-        margin-left: -1rem;
-        margin-top: -2rem;
+        height: 1.5rem;
+        width: 2.5rem;
+        top:30%;
+        margin-left: -0.8rem;
         border-radius: 0px;
-        
         cursor: pointer;
         user-select: none;
-        
         background: 
         repeating-linear-gradient(
           0deg,
@@ -94,21 +93,51 @@
           top: 50%;
           left: 0; right: 0;
           margin-top: -1px;
-          height: 3px;
+          height: 2px;
           background: rgba(255,255,255,.75);
         }
       }
-
-      .pan_encoder{
-          position: absolute;
-          width:60px;
-          height: 60px;
-          right:140px;
-          bottom : 10px;
-         border-radius: 50%;
-         background-color: transparent;
-         box-shadow: -1px -1px 2px rgb(0, 255, 221),
-         1px  1px 2px rgb(0, 255, 221),
-         -1px  -1px 4px rgb(0, 255, 221);
+      #panKnob {
+        color: white;
+        top: 70px;
+        left: 70px;
       }
+      
+      .pan_encoder{
+          display: flex;
+          justify-content: center;
+          align-content: center;
+          align-items: center;
+          width:40px;              
+          height: 40px;
+          left: 20%;
+          border-radius: 50%;
+          background-color: $color-black;
+          box-shadow: -1px -1px 2px rgb(0, 255, 221),
+          1px  1px 2px rgb(0, 255, 221),
+          -1px  -1px 4px rgb(0, 255, 221);
+      }
+      .pan_encoder2{
+        
+        width:30px;
+        height: 30px;
+        
+        border-radius: 50%;
+        background-color: transparent;
+        box-shadow: -1px -1px 2px rgb(0, 255, 221),
+        1px  1px 2px rgb(0, 255, 221),
+        -1px  -1px 4px rgb(0, 255, 221); 
+        &:after {
+          content: '';
+         
+          top: 30%;
+          bottom:10%;
+          left: 20%; 
+          right: 20%;
+          rotate: 90deg;
+          margin-top: -1px;
+          height: 2px;
+          background: rgba(255,255,255,.75);
+        }
+    }
     

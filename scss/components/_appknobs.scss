@@ -1,0 +1,42 @@
+.knob {
+  display:flex;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+.knob-grip {
+  width: 40px;
+  height: 40px;
+  background-color: #232323;
+  border-radius: 50%;
+  border: 3px solid #aa00ff;
+  position: absolute;
+  //left: 50%;
+  //top: 50%;
+  z-index: 1;
+  
+  &:after {
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 2px;
+    top: 5px;
+    left: 50%;
+    background-color: #fff;
+    //transform: translateX(-50%);
+  }
+}
+
+.knob-dial {
+  pointer-events: none;
+  stroke-width: 8;
+  stroke-dasharray: 184 184;
+  z-index: 0;
+  //left: 50%;
+  //top: 50%;
+  //transform: translate(-50%, -50%);
+}
+
+
+
+

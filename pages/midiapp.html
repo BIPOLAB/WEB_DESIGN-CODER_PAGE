@@ -9,7 +9,7 @@
   <meta name="description" content="En Muted Instruments. Construccion de instrumentos y dispositivos Midi custom">
   <meta name="keyboards" content="MIDI, electronica, instrumentos, tutoriales, arduino,raspberry">
   <meta name="author" content="Muted Instruments">
-  <title>Document</title>
+  <title>Muted Instruments MidiApp</title>
   <!-- IMPORT WEBMIDI JS -->
   <script src="https://cdn.jsdelivr.net/npm/webmidi@next/dist/iife/webmidi.iife.js"></script>
 
@@ -52,6 +52,25 @@
 
 <body>
 
+  <!-- INTRO MODAL VIDEO -->
+  <div aria-labelledby='videoIntroModal' class='modal fade' id='videoIntroModal' role='dialog' tabindex='-1'>
+    <div class='modal-dialog' role='document'>
+      <div class='modal-content'>
+        <div class='modal-body lean'>
+          <button aria-label='Close' class='close' data-dismiss='modal' title='Close' type='button'>
+            <span aria-hidden='true'>
+              &times
+            </span>
+          </button>
+          <iframe allowFullScreen='true' allowscriptaccess='always' frameborder='0' height='430'
+            src='https://www.youtube.com/embed/ng5ihyMCEb4?enablejsapi=1' title='Yaeltex - The Factory Intro'
+            width='640'></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END INTRO MODAL VIDEO -->
+
   <!--ABOUT MODAL -->
   <div class="modal fade" id="modal-window" tabindex="-1" role="dialog" aria-labelledby="tituloVentana"
     aria-hidden="true">
@@ -67,14 +86,13 @@
           <h6 class="text-center"><strong>Muted Instruments 2015-2021</strong></h6>
           <h6 class="text-center">Midi Editor v1.0.0</h6>
           <hr>
-          <p class="text-center">Developers:</p>
-          <p class="text-center fw-light">Leonardo Contarino</p>
-          <p class="text-center fw-light">Rodrigo Contarino</p>
-          <p class="text-center fw-light">Alvaro Capello</p>
+          <h6 class="text-center"><strong>Developers:</strong></h6>
+          <h6 class="text-center">Leonardo Contarino</h6>
+          <h6 class="text-center">Rodrigo Contarino</h6>
           <hr>
-          <p class="text-center">UI Design:</p>
-          <p class="text-center fw-light">Leonardo Contarino</p>
-          <p class="text-center fw-light">Alvaro Capello</p>
+          <h6 class="text-center"><strong>UI Design:</strong></h6>
+          <h6 class="text-center">Alvaro Capello</h6>
+          <h6 class="text-center">Leonardo Contarino</h6>
 
         </div>
 
@@ -217,284 +235,300 @@
     </div>
   </nav>
 
-
   <main class="global__main__app">
 
+    <div class="app__background">
 
-    <!-- <div class="left__column">
+      <div class="app__controller">
+        <!-- MIXER CONTAINER -->
+        <div class="mixer">
 
-    </div> -->
+          <!-- PAN ENCODER 01 -->
+          <div class="knob-container">
+            <div class="knob">
 
-
-    <div class="app__controller">
-
-
-      <!-- <img src="/images/appui/backgrounds/brushed_dark_alum.jpg" alt=""> -->
-      <div class="column">
-
-      </div>
-      <div class="app__header">
-        <h3>CONTROLLER</h4>
-          <h3>|</h3>
-          <h3>GLOBAL CONFIG</h3>
-      </div>
-      <div class="column__right">
-
-      </div>
-
-      <!-- MIXER CONTAINER -->
-      <div class="mixer">
-        <!-- FADER 1 -->
-        <div class="channelstrip">
-          <div class="fader">
-            <div class="fader-track">
-              <div class="fader-thumb">
-
+              <div class="knob-grip">
               </div>
+
             </div>
           </div>
-        </div>
-        <!-- FADER 2 -->
-        <div class="channelstrip">
-          <div class="fader">
-            <div class="fader-track">
-              <div class="fader-thumb">
+          <!-- PAN ENCODER 02 -->
+          <div class="knob-container">
+            <div class="knob">
 
+              <div class="knob-grip">
               </div>
+
             </div>
           </div>
-        </div>
-        <!-- FADER 3 -->
-        <div class="channelstrip">
-          <div class="fader">
-            <div class="fader-track">
-              <div class="fader-thumb">
+          <!-- PAN ENCODER 03 -->
+          <div class="knob-container">
+            <div class="knob">
 
+              <div class="knob-grip">
               </div>
+
             </div>
           </div>
-        </div>
-        <!-- FADER 4 -->
-        <div class="channelstrip">
-          <div class="fader">
-            <div class="fader-track">
-              <div class="fader-thumb">
+          <!-- PAN ENCODER 04 -->
+          <div class="knob-container">
+            <div class="knob">
 
+              <div class="knob-grip">
               </div>
+
             </div>
           </div>
-        </div>
-        <!-- FADER 5 -->
-        <div class="channelstrip">
-          <div class="fader">
-            <div class="fader-track">
-              <div class="fader-thumb">
+          <!-- PAN ENCODER 05 -->
+          <div class="knob-container">
+            <div class="knob">
 
+              <div class="knob-grip">
               </div>
+
             </div>
           </div>
-        </div>
-        <!-- FADER 6 -->
-        <div class="channelstrip">
-          <div class="fader">
-            <div class="fader-track">
-              <div class="fader-thumb">
+          <!-- PAN ENCODER 06 -->
+          <div class="knob-container">
+            <div class="knob">
 
+              <div class="knob-grip">
               </div>
+
             </div>
           </div>
-        </div>
-        <!-- FADER 7 -->
-        <div class="channelstrip">
-          <div class="fader">
-            <div class="fader-track">
-              <div class="fader-thumb">
+          <!-- PAN ENCODER 07 -->
+          <div class="knob-container">
+            <div class="knob">
 
+              <div class="knob-grip">
               </div>
+
             </div>
           </div>
-        </div>
-        <!-- FADER 8 -->
-        <div class="channelstrip">
-          <div class="fader">
-            <div class="fader-track">
-              <div class="fader-thumb">
+          <!-- PAN ENCODER 08 -->
+          <div class="knob-container">
+            <div class="knob">
 
+              <div class="knob-grip">
               </div>
+
             </div>
           </div>
-        </div>
-        <!-- FADER 9 -->
-        <div class="channelstrip">
-          <div class="fader">
-            <div class="fader-track">
-              <div class="fader-thumb">
 
-              </div>
-            </div>
+          <!-- MIXER SOLO PAD 01 -->
+          <div class="mixer_mode_solo_btn">
+
           </div>
-        </div>
-      </div>
-      <!-- END CHANNEL STRIP -->
+          <!-- MIXER SOLO PAD 02 -->
+          <div class="mixer_mode_solo_btn">
 
-      <div class="pads__container">
-        <div class="pads">
-          PAD 1
-        </div>
-        <div class="pads">
-          PAD 1
-        </div>
-        <div class="pads">
-          PAD 1
-        </div>
-        <div class="pads">
-          PAD 1
-        </div>
-        <div class="pads">
-          PAD 1
-        </div>
-        <div class="pads">
-          PAD 1
-        </div>
-        <div class="pads">
-          PAD 1
-        </div>
-        <div class="pads">
-          PAD 1
-        </div>
-        <div class="pads">
-          PAD 1
-        </div>
-        <div class="pads">
-          PAD 1
-        </div>
-        <div class="pads">
-          PAD 1
-        </div>
-        <div class="pads">
-          PAD 1
-        </div>
-        <div class="pads">
-          PAD 1
-        </div>
-        <div class="pads">
-          PAD 1
-        </div>
-        <div class="pads">
-          PAD 1
-        </div>
-        <div class="pads">
-          PAD 1
-        </div>
-      </div>
-
-      <div class="mmc__container">
-        <div class="screen-container">
-          <div class="screen-display">
-            <p>From Ableton</p>
-            <p>Note</p>
-            <p>Velocity</p>
           </div>
-        </div>
+          <!-- MIXER SOLO PAD 03 -->
+          <div class="mixer_mode_solo_btn">
 
-        <div class="controller__mmc">
-          <div class="mmc__menu__button">
-            <i class="fas fa-bars"> </i>
+          </div>
+          <!-- MIXER SOLO PAD 04 -->
+          <div class="mixer_mode_solo_btn">
+
+          </div>
+          <!-- MIXER SOLO PAD 05 -->
+          <div class="mixer_mode_solo_btn">
+
+          </div>
+          <!-- MIXER SOLO PAD 06 -->
+          <div class="mixer_mode_solo_btn">
+
+          </div>
+          <!-- MIXER SOLO PAD 07 -->
+          <div class="mixer_mode_solo_btn">
+
+          </div>
+          <!-- MIXER SOLO PAD 08 -->
+          <div class="mixer_mode_solo_btn">
+
           </div>
 
-          <div class="mmc__button">
-            <i class="fa fa-play"> </i>
-          </div>
-          <div class="mmc__button">
-            <i class="fa fa-play"> </i>
-          </div>
+          <!-- MIXER MUTE PAD 01 -->
+          <div class="mixer_mode_mute_btn">
 
-          <div class="mmc__button">
-            <i class="fa fa-play"> </i>
           </div>
-          <div class="mmc__button">
-            <i class="fa fa-stop"> </i>
+          <!-- MIXER MUTE PAD 02 -->
+          <div class="mixer_mode_mute_btn">
+
           </div>
-          <div class="mmc__button">
+          <!-- MIXER MUTE PAD 03 -->
+          <div class="mixer_mode_mute_btn">
+
+          </div>
+          <!-- MIXER MUTE PAD 04 -->
+          <div class="mixer_mode_mute_btn">
+
+          </div>
+          <!-- MIXER MUTE PAD 05 -->
+          <div class="mixer_mode_mute_btn">
+
+          </div>
+          <!-- MIXER MUTE PAD 06 -->
+          <div class="mixer_mode_mute_btn">
+
+          </div>
+          <!-- MIXER MUTE PAD 07 -->
+          <div class="mixer_mode_mute_btn">
+
+          </div>
+          <!-- MIXER MUTE PAD 08 -->
+          <div class="mixer_mode_mute_btn">
+
+          </div>
+          <!-- MIXER REC PAD 01 -->
+          <div class="mixer_mode_rec_btn">
+
+          </div>
+          <!-- MIXER REC PAD 02 -->
+          <div class="mixer_mode_rec_btn">
+
+          </div>
+          <!-- MIXER REC PAD 03 -->
+          <div class="mixer_mode_rec_btn">
+
+          </div>
+          <!-- MIXER REC PAD 04 -->
+          <div class="mixer_mode_rec_btn">
+
+          </div>
+          <!-- MIXER REC PAD 05 -->
+          <div class="mixer_mode_rec_btn">
+
+          </div>
+          <!-- MIXER REC PAD 06 -->
+          <div class="mixer_mode_rec_btn">
+
+          </div>
+          <!-- MIXER REC PAD 07 -->
+          <div class="mixer_mode_rec_btn">
+
+          </div>
+          <!-- MIXER REC PAD 08 -->
+          <div class="mixer_mode_rec_btn">
+
+          </div>
+          <!-- MIXER SELECT PAD 01 -->
+          <div class="mixer_mode_select_btn">
+
+          </div>
+          <!-- MIXER SELECT PAD 02 -->
+          <div class="mixer_mode_select_btn">
+
+          </div>
+          <!-- MIXER SELECT PAD 03 -->
+          <div class="mixer_mode_select_btn">
+
+          </div>
+          <!-- MIXER SELECT PAD 04 -->
+          <div class="mixer_mode_select_btn">
+
+          </div>
+          <!-- MIXER SELECT PAD 05 -->
+          <div class="mixer_mode_select_btn">
+
+          </div>
+          <!-- MIXER SELECT PAD 06 -->
+          <div class="mixer_mode_select_btn">
+
+          </div>
+          <!-- MIXER SELECT PAD 07 -->
+          <div class="mixer_mode_select_btn">
+
+          </div>
+          <!-- MIXER SELECT PAD 08 -->
+          <div class="mixer_mode_select_btn">
+
+          </div>
+        </div>
+        <!-- END CHANNEL STRIP -->
+
+        <div class="pads__container">
+          <div class="pads">
+
+          </div>
+          <div class="pads">
+
+          </div>
+          <div class="pads">
+
+          </div>
+          <div class="pads">
+
+          </div>
+          <div class="pads">
+
+          </div>
+          <div class="pads">
+
+          </div>
+          <div class="pads">
+
+          </div>
+          <div class="pads">
+
+          </div>
+          <div class="pads">
+
+          </div>
+          <div class="pads">
+
+          </div>
+          <div class="pads">
+
+          </div>
+          <div class="pads">
+
+          </div>
+          <div class="pads">
+
+          </div>
+          <div class="pads">
+
+          </div>
+          <div class="pads">
+
+          </div>
+          <div class="pads">
+
+          </div>
+        </div>
+        <!-- FUNCTION BAR -->
+        <div class="mmc__function__bar">
+          <h5>FUNCTION</h5>
+          <div class="mmc__function__btn"></div>
+          <div class="mmc__function__btn"></div>
+          <div class="mmc__function__btn"></div>
+          <div class="mmc__function__btn"></div>
+          <div class="mmc__function__btn"></div>
+          <div class="mmc__function__btn"></div>
+        </div>
+        <!-- TRANSPORT BAR -->
+        <div class="mmc__transport__bar">
+          <h4>transport</h4>
+          <div class="mmc__bw__button">
             <i class="fa fa-backward"> </i>
           </div>
-          <div class="mmc__button">
+          <div class="mmc__fw__button">
             <i class="fa fa-forward"> </i>
           </div>
-          <div class="mmc__button">
-            <i class="fa fa-pause"> </i>
+          <div class="mmc__stop__button">
+            <i class="fa fa-stop"> </i>
           </div>
-          <div class="mmc__button">
+          <div class="mmc__play__button">
+            <i class="fa fa-play"> </i>
+          </div>
+          <div class="mmc__rec__button">
             <i class="fa fa-circle"> </i>
           </div>
-          <div class="mmc__button">
-            <i class="fa fa-arrow-left"> </i>
-          </div>
-          <div class="mmc__button">
-            <i class="fa fa-arrow-right"> </i>
-          </div>
-          <div class="mmc__mode__button"></div>
-          <div class="mmc__mode__button"></div>
-          <div class="mmc__mode__button"></div>
-          <div class="mmc__mode__button"></div>
         </div>
-        <!-- PAN ENCODER -->
-        <div class="pan_encoder">
-          dd
-        </div>
-        <!-- NAVIGATION PANEL -->
-        <div class="navigation__container">
-          <div class="navigation__upBtn">
-
-          </div>
-          <div class="navigation__leftBtn">
-
-          </div>
-          
-          <div class="navigation__rightBtn">
-
-          </div>
-          <div class="navigation__downBtn">
-
-          </div>
-
-        </div>
+       
       </div>
-
-
-
-
-      <!-- <div class="app__header">
-        <h4>CONTROLLER</h4>
-        <h4>|</h4>
-        <h4>GLOBAL CONFIG</h4>
-      </div> -->
-      <!-- <div class="controller__wrapper">
-
-      </div> -->
-
-
-      <!--  <div class="container">
-      <div class="dropdown">
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-          DEVICE     
-        </a>
-      
-        <ul class="dropdown-menu" id="inputs" aria-labelledby="dropdownMenuLink">
-          
-        </ul>
-      </div>
-  </div>
-    <div class="midi-io-selects">
-      <div class="form-group">
-        <label for="inputs">Inputs:</label>
-        <select name="inputs" id="inputss"></select>
-      </div>
-      <div class="form-group">
-        <label for="outputs">Outputs:</label>
-        <select name="outputs" id="outputs"></select>
-      </div> 
-    </div>-->
     </div>
   </main>
 
@@ -591,29 +625,16 @@
       </div>
     </div>
   </div>
-
-
-  <!-- <footer>
-    <ul class="socials">
-                <li><a href="https://www.instagram.com/mutedinstruments/"  target="_blank"><i class="fa fa-instagram"></i></a></li>
-                <li><a href="https://www.youtube.com/channel/UCLbN6IbmCZCFfm8bYlDZZzQ" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                <li><a href="https://www.twitch.tv/muted_instruments" target="_blank"><i class="fa fa-twitch"></i></a></li>
-                <li><a href="https://github.com/bipolab" target="_blank"><i class="fa fa-github"></i></a></li>  
-    </ul>
-    <p>© 2021 Muted Instruments | Address: Florida, Buenos Aires, Argentina</p>
-
-  </footer> -->
-
-
-
   <!-- BOOTSTRAP SCRIPT -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
   <!-- END BOOTSTRAP SCRIPT -->
 
-  <!-- <script src="../static/js/midiapp.js"></script> -->
+  <!-- IMPORT KNOBS -->
+  <script src="https://colinbd.github.io/JSAudioKnobs/knobs.js"></script>
   <script src="../static/js/app_ui_actions.js"></script>
+  
 
 
 </body>

@@ -15,3 +15,23 @@ const note__dropMenu = document.querySelector(".note__dropMenu"),
         note__dropMenu.classList.toggle("toggle__dropNote");
 });
 
+let dial1 = new Knob({
+    size: "xlarge", 
+    type: "LittlePhatty", 
+    lowVal: 0, 
+    highVal: 100, 
+    value: 75, 
+    sensitivity: 1,  
+    lblTxtColor: "black",
+    id: "panKnob"
+    
+ });
+ dial1.getValue(20); //get dial 1's value
+ function knobChanged(id, val) {
+    console.log(`knob with ID: ${id} change to ${val}`);
+    /* if (id == knob1) {
+      ..do something
+    } else if (id == knob2) {
+      ..do something else
+    }  */
+  }

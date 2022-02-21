@@ -5,35 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="../static/css/main.css">
 </head>
 <body>
-  
+  <div class="knob" id="panKnob">sss</div>
+
+  <div id="knobValue">
+  </div>
+  <script src="https://colinbd.github.io/JSAudioKnobs/knobs.js"></script>
+   <script src="/static/js/app_ui_actions.js"></script>
 </body>
 </html>
-
-
-<div id="app"></div>
-<template id="mixer-template">
-  <div class="mixer">
-    <channel-strip color="#0f0" label="Channel 1" mute=""></channel-strip><channel-strip color="#0ff" label="Channel 2" solo=""></channel-strip><channel-strip color="#ff0" label="Channel 3"></channel-strip>
-  </div>
-</template><template id="channel-strip-template">
-  <div class="channelstrip">
-    <div class="label" v-bind:style="{ color: color }">
-      {{label}}
-    </div>
-    <div class="horizontal-meter">
-      <div class="activity" v-el:meter=""></div>
-    </div>
-    <button v-bind:class="{&#39;active&#39;: mute === true}" v-on:click="toggleMute">Mute</button><button class="solo" v-bind:class="{&#39;active&#39;: solo === true}" v-on:click="toggleSolo">Solo</button><fader></fader>
-  </div>
-</template><template id="fader-template">
-  <div class="fader">
-    <div class="fader-track" v-el:track="">
-      <div class="fader-thumb" v-bind:style="{ top: faderTop + &#39;px&#39; }" v-el:handle="" v-on:mousedown="onMouseDown" v-touch-options:pan="{ direction: &#39;vertical&#39;, threshold: 1 }" v-touch:pan="onPan"></div>
-    </div>
-    <div class="scale">
-      <div class="scale-tick" track-by="$index" v-bind:style="{ bottom: p + &#39;%&#39; }" v-for="p in scalePositions"></div>
-    </div>
-  </div>
-</template>

@@ -5,7 +5,7 @@
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    height: 400px ;
+    height: 150px ;
     width: auto;
     color:  $color-white;
     background-image: 
@@ -26,9 +26,9 @@
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    height: 80px ;
+    height: 150px ;
     width: 100%;
-    color:  $color-white;
+    color:  aqua;
     background-image: url("/images/heros/products_Hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -41,13 +41,19 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 80px ;
+    height: 100px ;
     width: 100%;
     color:  $color-white;
     background-image: url("/images/heros/projects_hero.PNG");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    
+}
+.projectsH1{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 3rem;
+ 
 }
 /***** SUPPORT HERO *****/ 
 #supportHero{
@@ -55,18 +61,22 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 80px ;
+    flex-direction: column;
+    height: 150px ;
     width: 100%;
     color:  $color-white;
-    background-image: url("/images/heros/support.jpg");
+    background-image: 
+    url("/images/heros/support.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    h1{
+        position: relative;
+        float: left;
+        color:$color-aqua;
+    }
 }
-#supportHero h1{
-    color: $color-red;
-    font-size: 70px;
-}
+
 
 
 /******* ABOUTUS HERO *******/
@@ -76,7 +86,7 @@
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    height: 80px ;
+    height: 150px ;
     width: auto;
     color:  $color-black;
     background-image: linear-gradient(

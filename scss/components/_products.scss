@@ -2,20 +2,19 @@
 .main__grid__container{
     
     display: grid;
-grid-template-columns: repeat(2,1fr);
-padding-left: 60px;
-padding-right: 60px;
-grid-gap: 16px;
+    grid-template-columns: repeat(2,1fr);
+    padding-left: 60px;
+    padding-right: 60px;
+    grid-gap: 16px;
     
 }
 .grid__colum{
     display: flex;
     flex-direction: column;
     margin-bottom: 16px;
-   
     h3{
+        font-family: 'Titillium Web', sans-serif;
         margin-top: 10px;
-        font-family: 'Quicksand', sans-serif;
         color:$color-white;
     }
     

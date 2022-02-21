@@ -13,6 +13,18 @@
         box-shadow: 0 12px 16px rgba(0,0,0,0.1) ;
     }
 }
+
+.supportCard{
+    background-color:$color-white;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin-top: 0px;
+    transition: all 0.65s;
+    &:hover{
+        transform:translateY(-2px);
+        box-shadow: 0 12px 16px rgba(0,0,0,0.1) ;
+    }
+}
     
     
 

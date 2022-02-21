@@ -10,33 +10,54 @@
     border-radius: $borderRadius;
 }
 .navigation__container{
-    @include pads_grid_define(repeat(3,20px),repeat(2,20px),10px);
+    @include pads_grid_define(40px 20px 20px 20px 40px,repeat(10px 30px 30px 20px 20px 20px),5px);
     display: grid;
-    position: absolute;
-    bottom:80px;
-    right:50px;
-    width: 100px;
-    height: 35px;
-    padding-top: 5px ;
+    
+    border: 1px solid white;
+    bottom:230px;
+    
+    width: 300px;
+    height: auto;
+    padding: 5px ;
     margin-left: 5px;
     margin-right: 5px;
+    .p{
+        color: $color-old-white;
+        grid-column: 1 / 6; 
+    }
 }
 
 .pads__container{
-    @include pads_grid_define(repeat(16,60px),repeat(1,60px),10px);
     display: grid;
-    position: absolute;
-    bottom:120px;
-    left:215px;
-    width: 60px;
-    height: 35px;
-    padding-top: 5px ;
-    margin-left: 5px;
-    margin-right: 5px;
+    position: relative;
+    @include pads_grid_define(repeat(8,54px),repeat(2,54px),10px);
+    top:120px;
+    padding:5px;
+    left: -150px;
 }
 
+.mmc__function__bar{
+    @include pads_grid_define(repeat(6,30px),10px 30px,10px);
+    display: grid;
+    position: relative;
+    justify-items: center;
+    padding:5px;
+    left:260px;
+    background-color: #353535;
+    border-radius: 10px;
+    h5{
+        grid-column: 1 / 7;
+        height: auto;
+        text-transform: uppercase;
+        background-color: #000000;
+        color:$color-old-white;
+    }
+   
+}
+
+
 .pads{
-    @include pads_define(white,50px,50px,3px);
+    @include pads_define(white,54px,54px,4px);
     cursor: pointer;
     user-select: none;
     box-shadow: -1px -1px 1px rgba(0, 0, 0,1),
@@ -46,7 +67,108 @@
                 
 //background: -webkit-radial-gradient(center, #900BAD, #4E648F);
 //background: -moz-radial-gradient(center, #900BAD, #4E648F);
-background: radial-gradient(ellipse at center,rgb(255, 255, 255), #bcff03 );
+background: radial-gradient(rgba(255, 255, 255, .7), rgba(255, 255, 255, .6));
+                 
+    &:hover{
+    box-shadow: -1px -1px 1px rgba(0, 0, 0,1),
+                 2px  2px 6px rgba(0,0,0,0.8),
+                 inset -2px -2px 5px rgba(85, 85, 85, 1),
+                 inset 2px  2px 5px rgba(85, 85, 85, 0.8);
+    }
+    &:active {
+        box-shadow: 0 0 6px #739dff;
+        background: radial-gradient(#cfecff, #cfecff);
+      }
+        
+} 
+.mixer_mode_solo_btn{
+    @include pads_define($color-aqua,50px,30px,2px);
+    font-size: 10px;
+    cursor: pointer;
+    border: 2px solid #3D3D3D;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #000000;
+    &:hover{
+        box-shadow: 1px 1px 1px #000000,
+                 inset -1px -1px 1px rgba(0,0,0,0.5),
+                 inset 1px  1px 1px rgba(0,0,0,0.5);
+    }
+} 
+.mixer_mode_select_btn{
+    @include pads_define($color-blue,50px,30px,2px);
+    font-size: 10px;
+    cursor: pointer;
+    border: 2px solid #3D3D3D;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #000000;
+    &:hover{
+        box-shadow: 1px 1px 1px #000000,
+                 inset -1px -1px 1px rgba(0,0,0,0.5),
+                 inset 1px  1px 1px rgba(0,0,0,0.5);
+    }
+} 
+.mixer_mode_mute_btn{
+    @include pads_define($color-old-white,50px,30px,2px);
+    font-size: 10px;
+    cursor: pointer;
+    border: 2px solid #3D3D3D;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #000000;
+    &:hover{
+        box-shadow: 1px 1px 1px #000000,
+                 inset -1px -1px 1px rgba(0,0,0,0.5),
+                 inset 1px  1px 1px rgba(0,0,0,0.5);
+    }
+} 
+
+.mixer_mode_rec_btn{
+    @include pads_define($color-pink,50px,30px,2px);
+    font-size: 10px;
+    cursor: pointer;
+    border: 2px solid #3D3D3D;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #000000;
+    &:hover{
+        box-shadow: 1px 1px 1px #000000,
+                 inset -1px -1px 1px rgba(0,0,0,0.5),
+                 inset 1px  1px 1px rgba(0,0,0,0.5);
+    }
+} 
+.navigation__leftUp{
+    @include pads_define(white,40px,20px,3px);
+    cursor: pointer;
+    user-select: none;
+    grid-column: 1 / 2;
+    box-shadow: -1px -1px 1px rgba(0, 0, 0,1),
+                 2px  2px 6px rgba(0,0,0,0.8),
+                 -1px  -1px 3px rgba(0,0,0,0.8);
+
+                
+//background: -webkit-radial-gradient(center, #900BAD, #4E648F);
+//background: -moz-radial-gradient(center, #900BAD, #4E648F);
+background: radial-gradient(ellipse at center,rgb(255, 255, 255), white  );
+                 
+    &:hover{
+    box-shadow: -1px -1px 1px rgba(0, 0, 0,1),
+                 2px  2px 6px rgba(0,0,0,0.8),
+                 inset -2px -2px 5px rgba(85, 85, 85, 1),
+                 inset 2px  2px 5px rgba(85, 85, 85, 0.8);
+    }
+        
+} 
+.navigation__rightUp{
+    @include pads_define(white,40px,20px,3px);
+    cursor: pointer;
+    user-select: none;
+    grid-column: 5 / 6;
+    box-shadow: -1px -1px 1px rgba(0, 0, 0,1),
+                 2px  2px 6px rgba(0,0,0,0.8),
+                 -1px  -1px 3px rgba(0,0,0,0.8);
+
+                
+//background: -webkit-radial-gradient(center, #900BAD, #4E648F);
+//background: -moz-radial-gradient(center, #900BAD, #4E648F);
+background: radial-gradient(ellipse at center,rgb(255, 255, 255), white  );
                  
     &:hover{
     box-shadow: -1px -1px 1px rgba(0, 0, 0,1),
@@ -60,7 +182,7 @@ background: radial-gradient(ellipse at center,rgb(255, 255, 255), #bcff03 );
     @include pads_define(white,20px,20px,3px);
     cursor: pointer;
     user-select: none;
-    grid-column: 2 / 3;
+    grid-column: 3 / 4;
     box-shadow: -1px -1px 1px rgba(0, 0, 0,1),
                  2px  2px 6px rgba(0,0,0,0.8),
                  -1px  -1px 3px rgba(0,0,0,0.8);
@@ -82,7 +204,7 @@ background: radial-gradient(ellipse at center,rgb(255, 255, 255), white  );
     @include pads_define(white,20px,20px,3px);
     cursor: pointer;
     user-select: none;
-    grid-column: 1 / 2;
+    grid-column: 2 / 3;
     box-shadow: -1px -1px 1px rgba(0, 0, 0,1),
                  2px  2px 6px rgba(0,0,0,0.8),
                  -1px  -1px 3px rgba(0,0,0,0.8);
@@ -104,7 +226,7 @@ background: radial-gradient(ellipse at center,rgb(255, 255, 255), white  );
     @include pads_define(white,20px,20px,10px);
     cursor: pointer;
     user-select: none;
-    grid-column: 2 / 3;
+    grid-column: 3 / 4;
     box-shadow: -1px -1px 1px rgba(0, 0, 0,1),
                  2px  2px 6px rgba(0,0,0,0.8),
                  -1px  -1px 3px rgba(0,0,0,0.8);
@@ -126,7 +248,7 @@ background: radial-gradient(ellipse at center,rgb(255, 255, 255), white  );
     @include pads_define(white,20px,20px,3px);
     cursor: pointer;
     user-select: none;
-    grid-column: 3 / 4;
+    grid-column: 4 / 5;
     box-shadow: -1px -1px 1px rgba(0, 0, 0,1),
                  1px  1px 1px rgba(0,0,0,0.5);
                  
@@ -148,7 +270,7 @@ background: radial-gradient(ellipse at center,rgb(255, 255, 255), white );
     @include pads_define(white,20px,20px,3px);
     cursor: pointer;
     user-select: none;
-    grid-column: 2 / 3;
+    grid-column: 3 / 4;
     box-shadow: -1px -1px 1px rgba(0, 0, 0,1),
                  2px  2px 6px rgba(0,0,0,0.8),
                  -1px  -1px 3px rgba(0,0,0,0.8);
@@ -171,24 +293,33 @@ background: radial-gradient(ellipse at center,rgb(255, 255, 255), white  );
 
 .mmc__container{
     display: flex;
-    position: absolute;
+    flex-direction: column;
+    position: relative;
     left:auto;
-    top: 140px;
-    right: 100px;
+    top: 0px;
+    left:  300px;
     justify-content: center;
     align-items: center;
-    width: 225px;
-    height: 400px;
-    // background-color: #000000;
+    width: auto;
+    padding: 10px;
+    height: auto;
+    background-color: $color-dark-gray;
     // background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
     border : 5px;
 }
 
-.controller__mmc{
-    @include pads_grid_define(repeat(4,30px),15px 15px 15px 30px,10px);
+.mmc__transport__bar {
+    @include pads_grid_define(repeat(5,50px),10px 30px,10px);
     display: grid;
-    border-bottom: 2px solid white;
+    position: relative;
+    justify-items: center;
+    left: 260px;
     padding-bottom: 5px;
+    h4{
+        grid-column: 1 / 6;
+        text-transform: uppercase;
+        color:$color-old-white;
+    }
 }
 
 .mmc__button{
@@ -206,7 +337,96 @@ background: radial-gradient(ellipse at center,rgb(255, 255, 255), white  );
                  inset 2px  2px 5px rgba(0,0,0,0.5);
     }
 }
-
+.mmc__bw__button{
+    @include pads_define($color-udark-gray,50px,30px,2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    cursor: pointer;
+    color:$color-white;
+    border: 2px solid #3D3D3D;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #000000;
+    &:hover{
+        color: $color-aqua;
+        box-shadow: 1px 1px 1px #000000,
+                 inset -1px -1px 1px rgba(0,0,0,0.5),
+                 inset 1px  1px 1px rgba(0,0,0,0.5);
+    }
+}
+.mmc__fw__button{
+    @include pads_define($color-udark-gray,50px,30px,2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    cursor: pointer;
+    color:$color-white;
+    border: 2px solid #3D3D3D;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #000000;
+    &:hover{
+        color: $color-aqua;
+        box-shadow: 1px 1px 1px #000000,
+                 inset -1px -1px 1px rgba(0,0,0,0.5),
+                 inset 1px  1px 1px rgba(0,0,0,0.5);
+    }
+}
+.mmc__stop__button{
+    @include pads_define($color-udark-gray,50px,30px,2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    cursor: pointer;
+    color:$color-white;
+    border: 2px solid #3D3D3D;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #000000;
+    &:hover{
+        color: $color-aqua;
+        box-shadow: 1px 1px 1px #000000,
+                 inset -1px -1px 1px rgba(0,0,0,0.5),
+                 inset 1px  1px 1px rgba(0,0,0,0.5);
+    }
+}
+.mmc__play__button{
+    @include pads_define($color-udark-gray,50px,30px,2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    cursor: pointer;
+    color:$color-white;
+    border: 2px solid #3D3D3D;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #000000;
+    &:hover{
+        color: $color-aqua;
+        box-shadow: 1px 1px 1px #000000,
+                 inset -1px -1px 1px rgba(0,0,0,0.5),
+                 inset 1px  1px 1px rgba(0,0,0,0.5);
+    }
+}
+.mmc__rec__button{
+    @include pads_define($color-udark-gray,50px,30px,2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    cursor: pointer;
+    color:$color-white;
+    border: 2px solid #3D3D3D;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #000000;
+    &:hover{
+        color: $color-aqua;
+        box-shadow: 1px 1px 1px #000000,
+                 inset -1px -1px 1px rgba(0,0,0,0.5),
+                 inset 1px  1px 1px rgba(0,0,0,0.5);
+    }
+}
 .mmc__menu__button{
     display: flex;
     flex-direction: row;
@@ -228,16 +448,9 @@ background: radial-gradient(ellipse at center,rgb(255, 255, 255), white  );
     }
 }
 
-.mmc__mode__button{
-    display: flex;
-    grid-row: 4 / 5;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    font-size: 10px;
-    width: 30px;
-    height: 30px;
-    background-color: rgb(255, 255, 255);
+.mmc__function__btn{
+    @include pads_define($color-old-white,30px,30px,2px);
+    display: flex; 
     border-radius: 5%;
     cursor: pointer;
     &:hover{
@@ -252,11 +465,11 @@ background: radial-gradient(ellipse at center,rgb(255, 255, 255), white  );
 .mmc__pageLeft__button{
     display: flex;
     flex-direction: row;
-    grid-column: 1 / 4;
+    grid-column: 1 / 2;
     align-items: center;
     justify-content: center;
     font-size: 10px;
-    width: auto;
+    width: 50px;
     height: 30px;
     background-color: rgb(255, 255, 255);
     border-radius: 5%;

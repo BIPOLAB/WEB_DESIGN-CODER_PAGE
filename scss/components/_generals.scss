@@ -7,17 +7,21 @@ html{
     max-width: 100%;
 }
 body{
-    background-color: white;
     font-family: 'Titillium Web', sans-serif;
+    background-color: white;
     width: 100vw;
     height: auto;
     max-width: 100%;
     overflow-x: hidden;
 }
 
-h1{font-size: 3.5em;}
-h2{font-size: 2.7em;}
-h3{font-size: 2em;}
+h1{font-family: 'Titillium Web', sans-serif; font-size: 3rem;}
+h2{font-family: 'Titillium Web', sans-serif; font-size: 2.25rem;}
+h3{font-family: 'Titillium Web', sans-serif; font-size: 1.5rem;}
+h4{font-family: 'Titillium Web', sans-serif; font-size: 1em;}
+
+
+
 p{font-size: 1.25em;}
 
 
@@ -44,8 +48,7 @@ p{font-size: 1.25em;}
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    }
-    .coursesWrapper h2{
+    h2{
         letter-spacing: 0.65rem;
         width: 100vw;
         height: 60px;
@@ -53,8 +56,70 @@ p{font-size: 1.25em;}
         font-family: 'Righteous', cursive;
         font-size: 3em;
         color: rgb(243, 241, 208);
-        
+    }
+    h3{color: rgb(134, 194, 50);
+    }
+    }
+
+    .searchBar{
+        display: flex;
+        width:  900px;
+        height: 50px;
+        align-items: center;
+        background-color: white;
+        border-bottom: 1px solid aqua;
+        color: black;
+        #searchFocus{
+            background-color: aqua;
+            position: relative;
+            font-size: 16px;
+            padding-top: 16px;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-bottom: 17px;
+            left:-5px;
+            margin-right: 5px;
+            margin-left: 5px;          
+        }
+        #search__arrow{
+            background-color: aqua;
+            position: relative;
+            font-size: 16px;
+            padding-top: 16px;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-bottom: 17px;
+            right:-5px;
+            margin-right: 5px;
+            margin-left: 5px;
+            &:hover{
+                cursor: pointer;
+                color:white;
+            }
+
+        }
+        #search__arrow{
+            float: right;
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+    }
+    .searchBar form{
+            width: 100%;
+            p{margin: 0;
+                //padding: 1em;
+            }
+            
+            
+            input{
+                width: 80%;
+                border:none;
+                outline: none;
+                
+            }
+            
     }
     
-    .coursesWrapper h3{color: rgb(134, 194, 50);}
+
+
 
