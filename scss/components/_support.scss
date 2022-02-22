@@ -2,10 +2,39 @@
     background-color: white;
 }
 .register_product{
-    margin-bottom: 10px;
     display: flex;
+    flex-direction: row;
     align-content: center;
+    margin-bottom: 10px;
     img{
        filter: invert( 100% );
+    }
+}
+
+.register__box{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    user-select: none;
+    
+    h2{font-family: 'Titillium Web', sans-serif; 
+        font-size: 2.25rem;
+    margin-bottom: 20px;}
+    h3{font-family: 'Titillium Web', sans-serif;
+        margin: 0px;
+        background-color: black;
+        color: white; 
+        font-size: 1.5rem; 
+        margin-top: 70px; 
+    &:hover{
+        cursor: pointer;
+        background-color: aqua;
+        transition: all  0.5s ease-in-out;
+    }}
+    p{
+        margin-top: 20px;
+        font-family: 'Titillium Web', sans-serif;
+        color: black;
+       font-size: 1rem;
     }
 }

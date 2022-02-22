@@ -31,9 +31,7 @@
     display: grid;
     position: relative;
     @include pads_grid_define(repeat(8,54px),repeat(2,54px),10px);
-    top:120px;
-    padding:5px;
-    left: -150px;
+    
 }
 
 .mmc__function__bar{
@@ -314,6 +312,7 @@ background: radial-gradient(ellipse at center,rgb(255, 255, 255), white  );
     position: relative;
     justify-items: center;
     left: 260px;
+    bottom: 25px;
     padding-bottom: 5px;
     h4{
         grid-column: 1 / 6;

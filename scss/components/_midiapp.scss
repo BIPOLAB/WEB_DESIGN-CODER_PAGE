@@ -12,17 +12,11 @@
 }
 .global__main__app{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: $color-old-white;
     padding: 0px 10px;
 }
 .app__background{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 640px;
     margin: 5px  5px;
@@ -47,10 +41,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 10px;
     justify-content: center;
     position: relative;
-    width: 850px;
-    height: 400px;
+    width: auto;
+    height: 200px;
     user-select: none;
     border-radius: 10px;
     border: 4px solid #111;
@@ -60,6 +55,7 @@
     0 2px 8px #555,
     0 0 1px 0 #a0a0a0 inset;
     box-sizing: border-box;
+    margin-bottom: 10px;
         
 }
 .app__footer{

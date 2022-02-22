@@ -1,0 +1,11 @@
+.seq_grid{
+    display: grid; 
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    @include mixer_grid_define(repeat(8,54px),30px 30px 30px 30px,10px);
+    //border: 1px solid white;
+    //padding: 5px;
+    padding-bottom: 5px;
+    
+}
