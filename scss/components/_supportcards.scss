@@ -1,44 +1,21 @@
 .support__card__container{
-    display:grid;
-    grid-template-columns: repeat(3,400px);
-    gap:30px;
+    display:flex;
+    flex-wrap: wrap;
     justify-content: center;
-    background-color: white;
-    width: auto;
-    max-width: auto;
-    height: 900px;
-    flex-wrap:wrap;
     text-align: center;
-    margin-bottom: 10px;
+    background-color: white;
+    width: 100%;
+    max-width: auto;
+    height: auto;
+    
+    
     h2{
         font-family: 'Righteous', cursive;
         letter-spacing: 0.8rem;
         width: 100%;
         height: 60px;
-        
-        font-size: 2em;
     }
     h3{color: $color-black;}
+    
 }
-.generic__support__card{
-    @extend .supportCard;
-    width:  400px;
-    height: 450px;   
-    text-align: center;
-    flex-direction: column;
-    img{
-         width:  400px;
-         height: 300px;
-    }
-    > h3{
-        @extend .title;
-    } 
-    > p{
-        @extend .p;
-    }
-    > button{
-        @extend .button;
-        width: 100px;
-        background-color: $color-dark-gray;
-    }
-}
+

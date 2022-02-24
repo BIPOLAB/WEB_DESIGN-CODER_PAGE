@@ -10,6 +10,7 @@
 }
 .grid__colum{
     display: flex;
+    width: auto;
     flex-direction: column;
     margin-bottom: 16px;
     h3{
@@ -22,7 +23,7 @@
 
 .grid__img{
     display: flex;
-    width: 100%;
+    width: auto;
     border-radius: 2px;
     background-color: $color-gray;
     overflow: hidden;
@@ -66,6 +67,7 @@
 }
 .subMenu-items{
     display: flex;
+    font-size: 50px;
     align-content: flex-start;
     list-style: none;
     margin-bottom: 0px;

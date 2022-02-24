@@ -16,10 +16,13 @@
     padding: 0px 10px;
 }
 .app__background{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(3,200px);
+    gap:20px;
     width: 100%;
-    height: 640px;
-    margin: 5px  5px;
+    height: 800px;
+    
     padding:10px;
     border-radius: 5px;
     // background-color: $color-old-white;
@@ -55,7 +58,7 @@
     0 2px 8px #555,
     0 0 1px 0 #a0a0a0 inset;
     box-sizing: border-box;
-    margin-bottom: 10px;
+   
         
 }
 .app__footer{

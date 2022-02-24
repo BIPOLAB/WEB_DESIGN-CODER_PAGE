@@ -41,7 +41,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 100px ;
+    height: 150px ;
     width: 100%;
     color:  $color-white;
     background-image: url("/images/heros/projects_hero.PNG");
@@ -101,4 +101,26 @@
     h1{
         color:$color-aqua;
     }
+}
+
+/***** BRIEF HERO *****/ 
+#briefHero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 650px ;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    background-image: url("/images/heros/app-application-business-business-strategy-coffee-collaboration-1448921-pxhere.com.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    h1{
+        font-family: 'Titillium Web', sans-serif;
+      
+        color: black;
+    }
+    
 }

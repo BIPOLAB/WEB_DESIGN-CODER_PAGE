@@ -8,7 +8,8 @@
 
 .main__grid{
     display: grid;
-    grid-template-columns: 1fr;
+    //grid-template-rows: 150px 600px  260px;
+    width: 100%;
     background-color: white;
 }
 
@@ -38,13 +39,13 @@
 
 .productsWrapper{
     display:flex;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
     text-align: center;
     background-color: white;
     width: 100%;
-    max-width: auto;
     height: auto;
+    
     
     h2{
         font-family: 'Righteous', cursive;
@@ -56,8 +57,8 @@
 }
 
 .projectsWrapper{
-    display:flex;
-    flex-wrap: wrap;
+    display:grid;
+    grid-template-columns: repeat(3,430px);
     justify-content: center;
     text-align: center;
     background-color: white;
