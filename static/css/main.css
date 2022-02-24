@@ -1790,6 +1790,11 @@ main {
   background-position: center center;
   background-repeat: no-repeat; }
 
+.proposal_img4 {
+  background-image: url("/images/presupuesto/Mobile-App.webp");
+  background-position: center center;
+  background-repeat: no-repeat; }
+
 /******GENERIC CARDS*****/
 .card, .generic__card, .generic__projects_cards, .generic__support__card {
   border-radius: 8px;
