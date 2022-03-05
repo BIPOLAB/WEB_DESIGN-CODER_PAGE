@@ -14,6 +14,10 @@
     
     .main__grid__container{
         display: block;
+        
+    }
+    main{
+        margin-top:80px;
     }
     
     header{
@@ -21,6 +25,7 @@
         position: fixed;
         justify-items: center; 
     }
+
     .mutedLogo {
         position: relative;
         width: 120px;
@@ -92,10 +97,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 6px;
+        
     }
     .subMenu-items li a {
-        padding: 12px 8px;
+        padding: 0  8px;
         font-size: 10px;
         display:block;
         text-transform: lowercase;

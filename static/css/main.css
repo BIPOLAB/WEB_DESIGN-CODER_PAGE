@@ -35,6 +35,12 @@ h4 {
 p {
   font-size: 1.25em; }
 
+/*********MAIN WRAPPER****************/
+.main__grid {
+  display: grid;
+  width: 100%;
+  background-color: white; }
+
 .main__wrapper {
   background-color: white;
   padding-left: 60px;
@@ -184,17 +190,6 @@ ul.show {
     color: #00ffbf; }
 
 /* END MAIN NAVBAR */
-/*********MAIN WRAPPER****************/
-.main__wrapper {
-  background-color: #ebebeb;
-  padding-left: 60px;
-  padding-right: 60px; }
-
-.main__grid {
-  display: grid;
-  width: 100%;
-  background-color: white; }
-
 .products h2 {
   text-align: center;
   letter-spacing: 0.8rem;
@@ -254,7 +249,7 @@ ul.show {
 
 .grid__colum {
   display: flex;
-  width: auto;
+  width: 665px;
   flex-direction: column;
   margin-bottom: 16px; }
   .grid__colum h3 {
@@ -289,27 +284,22 @@ ul.show {
 
 /* PRODUCTS SUBMENU */
 .products__subMenu {
-  background-color: black;
-  height: 50px;
-  width: 100%;
-  display: flex;
-  top: 0;
-  left: 0;
-  right: 0;
+  float: left;
+  margin-left: 10px;
+  height: 25px;
+  width: auto;
   justify-content: space-between;
   padding: 0 4%;
-  box-sizing: border-box;
-  transition: 0.5s; }
+  box-sizing: border-box; }
 
 .subMenu-items {
   display: flex;
   font-size: 50px;
-  align-content: flex-start;
   list-style: none;
   margin-bottom: 0px; }
 
 .subMenu-items li a {
-  padding: 12px 8px;
+  padding: 0px 0px;
   text-decoration: none;
   font-size: 15px;
   display: block;
@@ -317,7 +307,8 @@ ul.show {
   cursor: pointer;
   transition: 0.5s;
   color: white;
-  font-weight: lighter; }
+  font-weight: lighter;
+  margin-right: 5px; }
 
 /* END PRODUCTS SUBMENU */
 /******* INDEX HERO  *******/
@@ -657,6 +648,8 @@ footer {
     width: 400px; }
   .main__grid__container {
     display: block; }
+  main {
+    margin-top: 80px; }
   header {
     width: 100%;
     position: fixed;
@@ -711,10 +704,9 @@ footer {
   #products__subMenu {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-bottom: 6px; }
+    align-items: center; }
   .subMenu-items li a {
-    padding: 12px 8px;
+    padding: 0  8px;
     font-size: 10px;
     display: block;
     text-transform: lowercase;
@@ -1272,6 +1264,9 @@ footer {
   .generic__card > button {
     width: 100px;
     background-color: #333333; }
+  .generic__card a {
+    text-decoration: none;
+    color: #ebebeb; }
 
 .generic__projects_cards {
   width: 380px;
@@ -1281,6 +1276,9 @@ footer {
   .generic__projects_cards > button {
     width: 100px;
     background-color: #333333; }
+  .generic__projects_cards a {
+    text-decoration: none;
+    color: #ebebeb; }
 
 .generic__support__card {
   width: 380px;
@@ -1713,6 +1711,9 @@ footer {
       cursor: pointer;
       background-color: aqua;
       transition: all  0.5s ease-in-out; }
+    .register__box h3 a {
+      color: #ebebeb;
+      text-decoration: none; }
   .register__box p {
     margin-top: 60px;
     font-family: 'Titillium Web', sans-serif;
@@ -1794,6 +1795,10 @@ main {
   background-image: url("/images/presupuesto/Mobile-App.webp");
   background-position: center center;
   background-repeat: no-repeat; }
+
+.socialConnectHeading {
+  font-weight: 400;
+  font-family: 'Titillium Web', sans-serif; }
 
 /******GENERIC CARDS*****/
 .card, .generic__card, .generic__projects_cards, .generic__support__card {

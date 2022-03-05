@@ -20,7 +20,6 @@
     margin-right: 20px;
     user-select: none;
     width: 100%;
-    
     h2{font-family: 'Titillium Web', sans-serif; 
         font-size: 2.25rem;
     margin-bottom: 20px;}
@@ -34,7 +33,12 @@
         cursor: pointer;
         background-color: aqua;
         transition: all  0.5s ease-in-out;
-    }}
+    }
+    a  {
+        color: $color-white;
+        text-decoration: none;
+    }
+}
     p{
         margin-top: 60px;
         font-family: 'Titillium Web', sans-serif;

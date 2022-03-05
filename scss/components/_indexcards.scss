@@ -21,6 +21,10 @@
         width: 100px;
         background-color: $color-dark-gray;
     }
+    a{
+        text-decoration: none;
+        color: $color-white
+    }
 }
 
 .generic__projects_cards{
@@ -40,6 +44,10 @@
         @extend .button;
         width: 100px;
         background-color: $color-dark-gray;
+    }
+    a{
+        text-decoration: none;
+        color: $color-white
     }
 }
 

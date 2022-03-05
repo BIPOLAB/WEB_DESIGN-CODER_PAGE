@@ -1,24 +1,6 @@
-/*********MAIN WRAPPER****************/
 
-.main__wrapper{
-    background-color: $color-white;
-    padding-left: 60px;
-    padding-right: 60px;
-}
 
-.main__grid{
-    display: grid;
-    //grid-template-rows: 150px 600px  260px;
-    width: 100%;
-    background-color: white;
-}
 
-// .products{
-//     height: auto;
-//     justify-content: center;
-    
-
-// }
 .products h2{
     text-align: center;
     letter-spacing: 0.8rem;
